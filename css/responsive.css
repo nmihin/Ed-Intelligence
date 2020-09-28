@@ -41,9 +41,6 @@
 
 
 @media only screen and (max-width:991px){
-	.card-boxes #chart {
-		max-height:25vw;
-	}
 	
 	.top-boxes .d-flex, 
     .card-boxes .d-flex
@@ -63,11 +60,16 @@
 	}
 
 	.card-boxes .d-flex .card-box:first-child{
-		width: 32.5%;
+		width: 100%;
 	}
 
 	.card-boxes .d-flex .card-box:last-child {
-	    width: 62.5%;
+	    width: 100%;
+	}
+
+	.card-boxes .card-element .card-avatar {
+		width: auto; 
+		max-height: 100px;
 	}
 
 	.megamenu {
@@ -117,9 +119,6 @@
 }
 
 @media only screen and (max-width:620px){
-	.card-boxes #chart {
-    	max-height: 45vw;
-	}
 
 	.top-boxes .d-flex .top-box,
 	.card-boxes .d-flex .card-box
