@@ -256,9 +256,7 @@ html {
 }
 
 /* Top Boxes */
-.top-box,
-.card-box
-{
+.top-box {
   border-radius: 8px;
   background-color: #fff;
   margin-bottom: 20px;
@@ -272,7 +270,6 @@ html {
 }
 
 .top-box > a 
-.card-box > a
 {
 	font-size: 0.875em;
 	color: #111111;
@@ -283,12 +280,6 @@ html {
 	line-height: 1.3em;
 }
 
-.card-boxes .d-flex .card-box:first-child {
-    width: 32.5%;
-}
-.card-boxes .d-flex .card-box:last-child {
-    width: 62.5%;
-}
 
 .icon-bg-0 { background-color:#16a085; }
 .icon-bg-1 { background-color:#34495e; }
@@ -350,9 +341,102 @@ html {
 	font-weight: 700;
 }
 
+/* Cards */
 
+.card-boxes .card-box {
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 30px 0 40px 50px;
+  margin-top: 0;
+  margin: 0.5%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+}
 
+.card-boxes .card-box .card-title {
+	font-size: 20px;
+}
 
+.card-boxes .card-box > a {
+	font-size: 0.875em;
+	color: #111111;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #2980b9;
+	line-height: 1.3em;
+}
+
+.card-boxes .card-box .card-icon {
+	position: relative;
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-boxes .d-flex .card-box:first-child {
+    width: 32.5%;
+}
+.card-boxes .d-flex .card-box:last-child {
+    width: 62.5%;
+}
+
+.card-boxes .card-content > ul {
+	display: block;
+	float: left;
+    width: 100%;
+}
+
+.card-boxes .card-content > ul > li {
+	font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-boxes .card-content .card-element {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    align-items: center;
+}
+
+.card-boxes .card-element h3 {
+	color:#000;
+	display: block;
+    float: left;
+    width: 100%;
+}
+
+.card-boxes .card-element p {
+	display: block;
+    float: left;
+    width: 100%;
+}
+
+.card-boxes .card-element small {
+	color:#000;
+}
+
+.card-boxes .card-all {
+	text-align: center;
+}
+
+.card-boxes .card-all a {
+	color:blue;
+}
+
+.card-boxes .card-element .card-avatar {
+	border-radius: 50%;
+	width: 100%; 
+}
 
 /* Footer */
 .footer {
