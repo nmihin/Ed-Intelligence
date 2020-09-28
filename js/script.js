@@ -27,12 +27,15 @@
       .orient("left")
       .ticks(10);
 
-    var svg = d3.select("#chart").append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+    var svg = d3.select("#chart")
+       .append("div")
+       .classed("svg-container", true) //container class to make it responsive
+       .append("svg")
+       //responsive SVG needs these 2 attributes and no width and height attr
+       .attr("preserveAspectRatio", "xMinYMin meet")
+       .attr("viewBox", "0 0 600 400")
+       //class to make it responsive
+       .classed("svg-content-responsive", true); 
 
     d3.csv("assets/data/data.csv", function(error, data) {
 

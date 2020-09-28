@@ -372,9 +372,25 @@ html {
 
 .card-boxes .card-box .card-icon {
 	position: relative;
-    width: 20px;
+    width: 30px;
     height: auto;
     object-fit: cover;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.card-boxes .card-box .card-icon.delete, 
+.card-boxes .card-box .card-icon.edit
+{
+    -webkit-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+    box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+
+.card-boxes .card-box .card-icon.location {
+	background-color:#2980b9;
 }
 
 .card-boxes .d-flex .card-box:first-child {
@@ -392,11 +408,13 @@ html {
 
 .card-boxes .card-content > ul > li {
 	font-size: 12px;
-    line-height: 1.2;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
+	line-height: 1.2;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+	padding: 5px 0px 15px 0;
+	border-bottom: 1px solid #e6e6e8;
 }
 
 .card-boxes .card-content .card-element {
@@ -406,13 +424,18 @@ html {
     font-weight: 500;
     display: block;
     align-items: center;
+    margin-top: 10px;
 }
 
 .card-boxes .card-element h3 {
 	color:#000;
 	display: block;
+	font-weight: 500;
     float: left;
+    font-size:16px;
     width: 100%;
+    line-height: 1.5;
+    padding:3px 0;
 }
 
 .card-boxes .card-element p {
@@ -423,19 +446,42 @@ html {
 
 .card-boxes .card-element small {
 	color:#000;
+	position: relative;
+	bottom: 10px;
 }
 
 .card-boxes .card-all {
 	text-align: center;
+	margin: 25px 0;
 }
 
 .card-boxes .card-all a {
-	color:blue;
+	color:#025f9a;
+	padding:15px 0;
 }
 
 .card-boxes .card-element .card-avatar {
 	border-radius: 50%;
-	width: 100%; 
+	width: auto; 
+	width: 100%;
+}
+.card-boxes #chart {
+	width:100%;	
+    max-height: 30vw;
+}
+.card-boxes .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.card-boxes  .svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
 
 /* Footer */
