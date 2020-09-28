@@ -42,6 +42,23 @@
           beginAtZero: true
         }
       }]
+    },
+    tooltips: {
+      yAlign: 'bottom',
+      backgroundColor: '#fff',
+      borderColor: '#e5e5e5',
+      titleFontColor: "#0264a0",
+      borderWidth: 1,
+      titleFontSize: 16,
+      xPadding:15,
+      yPadding:15,
+      displayColors: false,
+      callbacks: {
+          label: function(tooltipItem) {
+              return Number(tooltipItem.yLabel) + "k Subscribers in this year!";
+          }
+      },
+      bodyFontColor: '#ababab'
     }
   };
 

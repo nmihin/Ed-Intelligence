@@ -12,9 +12,9 @@
 /* FONTS */
 @font-face{
   font-family: "SF Pro Text";
-  src: url("/fonts/sfprotext-regular.ttf") format("truetype");
-  src: url("/fonts/sfprotext-semibold.ttf") format("truetype");
-  src: url("/fonts/sfprotext-bold.ttf") format("truetype");
+  src: url("../fonts/Sfprotext/sfprotext-regular.ttf") format("truetype");
+  src: url("../fonts/Sfprotext/sfprotext-semibold.ttf") format("truetype");
+  src: url("../fonts/Sfprotext/sfprotext-bold.ttf") format("truetype");
 }
 
 /* CSS RESET */
@@ -358,6 +358,7 @@ html {
 
 .card-boxes .card-title {
 	font-size: 20px;
+	height: 40px;
 }
 
 .card-boxes .card-title h2 {
@@ -384,6 +385,59 @@ html {
     padding: 7px;
 }
 
+.card-boxes .card-box .profile-tag {
+	background-color: #f8fbff;
+	border-radius: 25px;
+	padding: 10px 20px;
+	border:1px solid #e2e6eb;
+	position: relative;
+	top:-10px;
+}
+
+.card-boxes .card-box .profile-tag > span {
+	color: #000;
+	font-size: 14px;
+	margin-top:0;
+	margin-bottom:4px;
+}
+
+.card-boxes .card-box .profile-tag > img {
+    margin-bottom: -3px;
+}
+
+.card-boxes .card-box .user-menu {
+	background-color:#02609b;
+	border-radius: 15px;
+	padding: 15px 0;
+	margin-top:0;
+	right: 30px;
+    width: 200px;
+}
+
+.card-boxes .card-box .user-menu li {
+	padding: 10px 0; 
+	background-color:transparent;
+	border:none;
+}
+
+.card-boxes .card-box .user-menu ul {
+	border-bottom: 1px solid #67a0c3;
+}
+
+.card-boxes .card-box .user-menu ul:last-child {
+	border:none;
+
+}
+
+.card-boxes .card-box .user-menu li:hover {
+	background-color:#67a0c3;
+}
+
+
+.card-boxes .card-box .user-menu li > a {
+	color: #fff;
+}
+
 .card-boxes .select {
 	position: absolute;
     right: 10px;
@@ -397,6 +451,13 @@ html {
     box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
     margin-left:10px;
     margin-bottom: 10px;
+}
+
+.card-boxes .delete .card-icon:hover, 
+.card-boxes .edit .card-icon:hover,
+.card-boxes .location .card-icon:hover
+{
+	opacity:0.8;
 }
 
 .card-boxes .location {
@@ -443,6 +504,10 @@ html {
     margin-top: 10px;
 }
 
+.card-boxes .card-content #barChart {
+	padding-right: 20px;
+}
+
 .card-boxes .card-element h3 {
 	color:#000;
 	display: block;
@@ -476,6 +541,11 @@ html {
 .card-boxes .card-all a {
 	color:#025f9a;
 	padding:15px 0;
+	font-weight: 300;
+}
+
+.card-boxes .card-all a:hover {
+	color: #0799f5;
 }
 
 .card-boxes .card-element .card-avatar {

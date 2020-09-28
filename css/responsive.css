@@ -86,6 +86,16 @@
 
 @media only screen and (max-width:768px){
 
+	.card-boxes .card-box .user-menu {
+		width: 340px;
+	}
+
+	.card-boxes .card-box .user-menu > ul{
+		width:50%;
+		float: left;
+		border:0;
+	}
+
 	.dashboard-menu,
 	.sub-header,
 	.megamenu {
