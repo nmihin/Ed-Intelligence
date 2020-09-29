@@ -376,13 +376,23 @@ html {
 }
 
 .aside-box figure img {
+	width:100%;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
 
-.aside-box figure:hover img {
+.aside-box figure a {
+	height:100%;
+	display: block;
+}
+
+.aside-box .item-content {
+	cursor: pointer;
+}
+
+.aside-box:hover img {
 	-webkit-transform: scale(1.1);
     transform: scale(1.1);
     -webkit-transition: all .3s ease-in-out;
@@ -704,10 +714,21 @@ label:active:after {
 	width: 100%;
 }
 
+/* BOOTSTRAP CUSTOMIZATION */
+.bootstrap-datetimepicker-widget {
+	width:100% !important;
+	overflow:hidden;
+}
 
-
-
-
+.topdateinfo,
+.timepicker-picker, 
+.bootstrap-datetimepicker-widget .accordion-toggle
+{
+	background-color: #025f9a !important;
+}
+.bootstrap-datetimepicker-widget .datepicker > div {
+	width:101% !important;
+}
 
 
 
