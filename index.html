@@ -1,0 +1,1582 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <title>Ed-Intelligence | SMIS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Management Information System For Apex College - Dated(2015-11-1)" name="description" />
+    <meta content="Satish Maharjan (satish.maharjan55@gmail.com)" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+ -->
+    <link href="https://educationalschool.iteg.com.np/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/global/css/barchart.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+    <!-- <link href="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+<link href="https://educationalschool.iteg.com.np/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/> -->
+    <!-- <link href="https://educationalschool.iteg.com.np/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
+ -->
+    <link rel="stylesheet" type="text/css" href="https://educationalschool.iteg.com.np/assets/global/plugins/jquery-nestable/jquery.nestable.css" />
+    <!-- dynamically load required plugin css from contoller -->
+    <link rel="stylesheet" type="text/css" href="https://educationalschool.iteg.com.np/assets/global/css/styles.css"/>
+    <!-- END PAGE LEVEL PLUGIN STYLES -->
+    <!-- BEGIN PAGE STYLES -->
+    <link href="https://educationalschool.iteg.com.np/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+    <link href="https://educationalschool.iteg.com.np/assets/global/css/components-md.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/admin/layout2/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/admin/layout2/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link rel="stylesheet" type="text/css" href="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-toastr/toastr.min.css"/>
+    <link href="https://educationalschool.iteg.com.np/assets/admin/layout2/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="https://educationalschool.iteg.com.np/assets/admin/layout2/css/helpfile.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="https://educationalschool.iteg.com.np//favicon.ico" type="image/x-icon">
+    
+    <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- BEGIN CORE PLUGINS -->
+    <!--[if lt IE 9]>-->
+    <!--<script src="https://educationalschool.iteg.com.np/assets/global/plugins/respond.min.js"></script> -->
+    <!-- to enable responsive web designs in browsers that don't support CSS3 Media Queries -->
+    <!--<script src="https://educationalschool.iteg.com.np/assets/global/plugins/excanvas.min.js"></script> -->
+    <!--[endif]-->
+    <script type="text/javascript">
+        //siteurl path for the external js 
+        var userPublic = 'c20ad4d76fe97759aa27a0c99bff6710';
+        function site_url(add_uri = ""){
+            let site_link = 'https://educationalschool.iteg.com.np/';
+            if(add_uri != "")
+                return site_link+add_uri;
+            else
+                return site_link;
+        }
+    </script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-growl/jquery.bootstrap-growl.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+            <script src="https://educationalschool.iteg.com.np/assets/global/scripts/metronic.min.js" type="text/javascript"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/global/plugins/sweetalert.js"></script>
+    <script src="https://educationalschool.iteg.com.np/assets/admin/layout2/scripts/layout.js" type="text/javascript"></script>
+    
+    <script src="https://educationalschool.iteg.com.np/assets/admin/layout2/scripts/demo.js" type="text/javascript"></script>
+    <link href="https://educationalschool.iteg.com.np/assets/admin/layout2/css/root.css" rel="stylesheet" type="text/css" />
+
+
+    <!--ADDED START-->
+    <script src="js/Chart.min.js" type="text/javascript"></script>
+    <script src="js/Chart.roundedBarCharts.min.js" type="text/javascript"></script>
+    <style>
+    /* Cards */
+    @font-face {
+      font-family: 'icomoon';
+      src:  url('fonts/icons/icomoon.eot?j3btqh');
+      src:  url('fonts/icons/icomoon.eot?j3btqh#iefix') format('embedded-opentype'),
+        url('fonts/icons/icomoon.woff2?j3btqh') format('woff2'),
+        url('fonts/icons/icomoon.ttf?j3btqh') format('truetype'),
+        url('fonts/icons/icomoon.woff?j3btqh') format('woff'),
+        url('fonts/icons/icomoon.svg?j3btqh#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon-arrow:before {
+      content: "\e900";
+      color: #fff;
+    }
+    .icon-arrow-gray:before {
+      content: "\e901";
+      color: #818181;
+    }
+    .icon-attendence:before {
+      content: "\e902";
+      color: #fff;
+    }
+    .icon-box-confirm:before {
+      content: "\e903";
+      color: #fff;
+    }
+    .icon-box-layers:before {
+      content: "\e904";
+      color: #fff;
+    }
+    .icon-box-plan:before {
+      content: "\e905";
+      color: #fff;
+    }
+    .icon-box-profile:before {
+      content: "\e906";
+      color: #fff;
+    }
+    .icon-box-student:before {
+      content: "\e907";
+      color: #fff;
+    }
+    .icon-btn-arrow:before {
+      content: "\e908";
+      color: #fff;
+    }
+    .icon-classroom:before {
+      content: "\e909";
+      color: #fff;
+    }
+    .icon-confirm:before {
+      content: "\e90a";
+      color: #fff;
+    }
+    .icon-delete:before {
+      content: "\e90b";
+      color: #c0392b;
+    }
+    .icon-dots:before {
+      content: "\e90c";
+      color: #a6a6a6;
+    }
+    .icon-edit:before {
+      content: "\e90d";
+      color: #22a15a;
+    }
+    .icon-home:before {
+      content: "\e90e";
+      color: #fff;
+    }
+    .icon-layers:before {
+      content: "\e90f";
+      color: #fff;
+    }
+    .icon-location:before {
+      content: "\e910";
+      color: #fff;
+    }
+    .icon-mail:before {
+      content: "\e911";
+      color: #dfdfdf;
+    }
+    .icon-manage:before {
+      content: "\e912";
+      color: #fff;
+    }
+    .icon-m-notification:before {
+      content: "\e913";
+      color: #9b9b9b;
+    }
+    .icon-m-off:before {
+      content: "\e914";
+      color: #9b9b9b;
+    }
+    .icon-m-password:before {
+      content: "\e915";
+      color: #9b9b9b;
+    }
+    .icon-m-profile:before {
+      content: "\e916";
+      color: #9b9b9b;
+    }
+    .icon-m-settings:before {
+      content: "\e917";
+      color: #9b9b9b;
+    }
+    .icon-pass:before {
+      content: "\e918";
+      color: #dfdfdf;
+    }
+    .icon-plan:before {
+      content: "\e919";
+      color: #fff;
+    }
+    .icon-profile:before {
+      content: "\e91a";
+      color: #fff;
+    }
+    .icon-reports:before {
+      content: "\e91b";
+      color: #fff;
+    }
+    .icon-search:before {
+      content: "\e91c";
+      color: #fff;
+    }
+    .icon-settings:before {
+      content: "\e91d";
+      color: #fff;
+    }
+    .icon-student:before {
+      content: "\e91e";
+      color: #fff;
+    }
+
+
+    .ed_card-boxes .card-box {
+      min-height: 220px;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 10px 0 10px 0;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+      margin-bottom: 25px;
+    }
+
+    .ed_card-boxes .user-profile:hover .user-menu {
+        opacity: 1;
+        z-index: 1111;
+    }
+
+    .ed_card-boxes .card-title {
+    	font-size: 20px;
+    	height: 40px;
+      padding-left: 50px;
+    }
+
+    .ed_card-boxes .card-title h2 {
+    	max-width: 85%;
+    	line-height: 1.25;
+      float:left;
+      font-size: 21px;
+    }
+
+    .ed_card-boxes .card-box > a {
+    	font-size: 0.875em;
+    	color: #111111;
+    	position: absolute;
+    	right: 10px;
+    	bottom: 10px;
+    	color: #2980b9;
+    	line-height: 1.3em;
+    }
+
+    .ed_card-boxes .card-box .icon {
+    	position: relative;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 7px;
+    }
+
+    .ed_card-boxes .card-box .profile-tag {
+    	background-color: #f8fbff;
+    	border-radius: 25px;
+    	padding: 5px 20px;
+    	border:1px solid #e2e6eb;
+    	position: relative;
+    	top:10px;
+      right: 30px;
+      float: right;
+      cursor: pointer;
+    }
+
+    .ed_card-boxes .card-box .profile-tag > span {
+    	color: #000;
+    	font-size: 14px;
+    	margin-top:0;
+    }
+
+    .ed_card-boxes .card-box .profile-tag > img {
+        margin-bottom: -3px;
+    }
+
+    .ed_card-boxes .card-box .user-menu {
+    	background-color:#02609b;
+    	border-radius: 15px;
+    	padding: 15px 0;
+    	margin-top:0;
+    	right: 30px;
+      width: 200px;
+      position: absolute;
+      top: 55px;
+      opacity: 0;
+      z-index: -1;
+      list-style: none;
+    }
+
+    .ed_card-boxes .card-box .user-menu li {
+    	padding: 5px 0; 
+      width: 100%;
+      display: block;
+    	background-color:transparent;
+    	border:none;
+    }
+
+    .ed_card-boxes .card-box .user-menu ul {
+    	border-bottom: 1px solid #67a0c3;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    .ed_card-boxes .card-box .user-menu ul:last-child {
+    	border:none;
+
+    }
+
+    .ed_card-boxes .card-box .user-menu li:hover {
+    	background-color:#67a0c3;
+    }
+
+
+    .ed_card-boxes .card-box .user-menu li > a {
+    	color: #fff;
+      font-size: 15px;
+      padding: 0 25px;
+      font-weight: 500;
+    }
+
+    .ed_card-boxes .select {
+        position: absolute;
+        right: 30px;
+        top: 35px;
+    }
+
+    .ed_card-boxes .delete .icon, 
+    .ed_card-boxes .edit .icon
+    {
+        -webkit-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+        -moz-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+        box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+        margin-left:10px;
+        margin-bottom: 10px;
+    }
+
+    .ed_card-boxes .delete .icon:hover, 
+    .ed_card-boxes .edit .icon:hover,
+    .ed_card-boxes .location .icon:hover
+    {
+    	opacity:0.8;
+    }
+
+    .ed_card-boxes .location {
+    	width:30px;
+    	height:30px;
+    	float: left;
+    }
+
+    .ed_card-boxes .location .icon {
+    	background-color:#2980b9;
+    }
+
+    .ed_card-boxes .card-content {
+      padding-left: 50px;
+    }
+
+    .ed_card-boxes .card-box.overflow {
+      overflow:visible;
+    }
+
+    .ed_card-boxes .card-content > ul {
+    	display: block;
+    	float: left;
+        width: 100%;
+        padding: 0;
+    }
+
+    .ed_card-boxes .card-content > ul > li {
+    	font-size: 12px;
+    	line-height: 1.2;
+    	font-weight: 500;
+    	display: inline-flex;
+    	align-items: center;
+    	width: 100%;
+    	padding: 5px 0px 15px 0;
+    	border-bottom: 1px solid #e6e6e8;
+    }
+
+    .ed_card-boxes .card-content .card-element {
+        font-size: 12px;
+        line-height: 1.2;
+        color: #fff;
+        font-weight: 500;
+        display: block;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .ed_card-boxes .card-content .card-element a {
+      text-decoration: none !important;
+    }
+
+    .ed_card-boxes .card-content #ed_barChart {
+    	padding-right: 20px;
+    }
+
+    .ed_card-boxes .card-element h3 {
+    	color:#000;
+    	display: block;
+    	font-weight: 500;
+        float: left;
+        font-size:16px;
+        width: 100%;
+        line-height: 1.5;
+        padding:3px 0;
+    }
+
+    .ed_card-boxes .card-element p {
+    	display: block;
+        float: left;
+        width: 100%;
+    }
+
+    .ed_card-boxes .card-element small {
+        color: #000;
+        position: relative;
+        top: 7px;
+        float: left;
+        left: 7px;
+    }
+
+    .ed_card-boxes .card-all {
+        margin: 25px auto;
+        float: left;
+        text-align: center;
+        width:100%;
+    }
+
+    .ed_card-boxes .card-all a {
+    	color:#025f9a;
+    	padding:15px 0;
+    	font-weight: 300;
+    }
+
+    .ed_card-boxes .card-all a:hover {
+    	color: #0799f5;
+    }
+
+    .ed_card-boxes .card-element .card-avatar {
+    	border-radius: 50%;
+    	width: auto; 
+    	width: 100%;
+    }
+    .ed_card-boxes .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .ed_card-boxes  .svg-content-responsive {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+
+    .ed_card-boxes.manage > div {
+      width:20%;
+    }
+
+    .ed_card-boxes.manage .card-content > ul > li {
+      border-bottom:0;
+      padding: 5px 0px 5px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .ed_card-boxes.manage .card-title {
+        padding-left: 65px;
+        color: #025f9a;
+    }
+
+    .ed_card-boxes.manage .card-title h2 {
+        font-size: 21px;
+    }
+
+    .ed_card-boxes.manage .card-content {
+          padding-left: 65px;
+    }
+
+    .ed_card-boxes.manage .card-box .icon {
+        position: absolute;
+        left: 14px;
+        right: auto;
+        top: 19px;
+        font-size: 22px;
+    }
+
+    .ed_card-boxes.manage .card-content > span {
+      position: absolute;
+      width:60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #ccc;
+      top:-19px;
+      left: -14px;
+    }
+
+    .ed_card-boxes.manage .card-content > span.green {
+      background:#16a085;
+    }
+    .ed_card-boxes.manage .card-content > span.gray {
+      background:#34495e;
+    }
+    .ed_card-boxes.manage .card-content > span.blue {
+      background:#2980b9;
+    }
+    .ed_card-boxes.manage .card-content > span.light {
+      background:#7f8c8d;
+    }
+    .ed_card-boxes.manage .card-content > span.red {
+      background:#c0392b;
+    }
+
+    .ed_card-boxes.manage .card-content > a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      top: auto;
+      color:#025f9a;
+      font-weight: bold;
+    }
+
+    .ed_card-boxes.manage .card-content > a:hover {
+      color: #0799f5;
+    }
+
+    @media only screen and (max-width:1100px){
+      .ed_card-boxes.manage > div {
+        width: 33.33%;
+      }
+    }
+
+    @media only screen and (max-width:768px){
+       .ed_card-boxes.manage > div {
+        width: 50%;
+      } 
+      .ed_card-boxes .card-box .user-menu {
+        width: 340px;
+      }
+
+      .ed_card-boxes .card-box .user-menu > ul{
+        width:50%;
+        float: left;
+        border:0;
+      }
+
+      .ed_card-boxes .card-box .user-menu li {
+        padding: 2px 0;
+      }
+    }
+
+    @media only screen and (max-width:620px){
+      .ed_card-boxes.manage > div {
+        width: 100%;
+      }  
+    }
+
+    .portlet-body {
+      overflow-x: hidden !important;
+    }
+    </style>
+    <!--ADDED END-->
+
+    <!-- END PAGE LEVEL SCRIPTS -->
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+
+<body class="page-md page-boxed page-header-fixed  page-container-bg-solid ">
+    <!-- BEGIN HEADER -->
+
+    
+    <header class="page-header md-shadow-z-1-i navbar navbar-fixed-top  justify-center " id="forHelpfile">
+        <div class="page-ico">
+            <a href="https://educationalschool.iteg.com.np/theme_option/home">
+                <img src="https://educationalschool.iteg.com.np/uploads/logo.png" alt="logo"  class="logo-default img-responsive fit-cover" style="padding: 10px;" />
+            </a>
+            
+        </div>
+        	<!-- BEGIN SIDEBAR -->
+
+	<div class="page-sidebar-wrapper text-center relative">
+	    <div class="page-sidebar  ">
+	        <!-- BEGIN SIDEBAR MENU -->
+	        <ul class="page-sidebar-menu m-0 page-sidebar-menu-hover-submenu page-sidebar-menu-compact relative" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+	            
+								<li>
+								<a href="https://educationalschool.iteg.com.np/theme_option/home">
+								<i class="icon-home"></i>
+									 <span class="title">  Home</span>
+								</a></li>
+								<li>
+								<a href="javascript:void(0);">
+								<i class="icon-key"></i>
+									 <span class="title">  Settings</span>
+								</a><div class="sub-menu"><ul class="parent-menu">
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-list"></i>
+														 General
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/theme_option/site_info">
+														<i class="icon-speech"></i>
+															 School Settings
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/theme_option/user_account/lists">
+														<i class="icon-users"></i>
+															 User Accounts 
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/theme_option/manage_menu">
+														<i class="icon-list"></i>
+															 Manage Menu
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/theme_option/site_info/code_book">
+														<i class="icon-notebook"></i>
+															 Code Book
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-notebook"></i>
+														 Report
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/pmf/measures_config">
+														<i class="icon-note"></i>
+															 PMF Measures
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-list"></i>
+														 Classes
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/lesson_plan/home_group">
+														<i class="icon-docs"></i>
+															 Home Room
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/classes/batch">
+														<i class="icon-notebook"></i>
+															 School Year
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/classes/subject_manager">
+														<i class="icon-notebook"></i>
+															 Subject Manager
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-list"></i>
+														 Notification
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/notification/list_template">
+														<i class="icon-list"></i>
+															 Manage Template
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/notification/email_backlog">
+														<i class="icon-list"></i>
+															 Notification Email List
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="https://educationalschool.iteg.com.np/general_content/commit">
+													<i class="icon-speech"></i>
+														 Project Commit
+													</a></li></ul></div></li>
+								<li>
+								<a href="javascript:void(0);">
+								<i class="icon-docs"></i>
+									 <span class="title">  School Reports</span>
+								</a><div class="sub-menu"><ul class="parent-menu">
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-social-dropbox"></i>
+														 General Reports
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/general_reports/student_list">
+														<i class="icon-notebook"></i>
+															 Student List
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/employee_reports/class_teachers">
+														<i class="icon-users"></i>
+															 Staff List
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/general_reports/withdrawn_student_list">
+														<i class="icon-list"></i>
+															 Withdrawn Student List
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/profile/student/student_rank">
+														<i class="icon-users"></i>
+															 Student Rank
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-speedometer"></i>
+														 School Performance
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/pmf/rate_me">
+														<i class="icon-book-open"></i>
+															 Current Year PMF
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/pmf">
+														<i class="icon-graph"></i>
+															 PMF Data Import/Export
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/barcontrol/equity">
+														<i class="icon-bar-chart"></i>
+															 Current Year Equity Report
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/barcontrol/prior_equity">
+														<i class="icon-doc"></i>
+															 Prior Year Equity Report
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-speedometer"></i>
+														 Student Performance
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/profile/student/manage">
+														<i class="icon-users"></i>
+															 Student Profile
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/academic_report/st_attendance_report">
+														<i class="icon-users"></i>
+															 Student Attendance Report
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/reports/academic_report/pmf_attendance_report">
+														<i class="icon-users"></i>
+															 PMF Attendance Report
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/assessment">
+														<i class="icon-list"></i>
+															 Assessment Manager
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-speedometer"></i>
+														 Teacher Performance
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/lesson_plan">
+														<i class="icon-notebook"></i>
+															 Lesson Plans
+														</a></li></ul></li></ul></div></li>
+								<li>
+								<a href="javascript:void(0);">
+								<i class="icon-note"></i>
+									 <span class="title">  Manage</span>
+								</a><div class="sub-menu"><ul class="parent-menu">
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-list"></i>
+														 Student
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/profile/student/add">
+														<i class="icon-user"></i>
+															 Add Student
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/profile/student/manage">
+														<i class="icon-users"></i>
+															 Manage Students
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/attendance">
+														<i class="icon-drawer"></i>
+															 Attendance Entry
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/release_request/student_release">
+														<i class="icon-list"></i>
+															 Release Students
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/code/st_list">
+														<i class="icon-notebook"></i>
+															 Edit Entry/Exit Code
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/discipline/Student_discipline/std_discipline_list">
+														<i class="icon-user-following"></i>
+															 Edit Student Discipline
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-list"></i>
+														 Class
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/classes/class_period">
+														<i class="icon-social-dropbox"></i>
+															 Class Period Manage
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/profile/employee/manage">
+														<i class="icon-user-following"></i>
+															 Manage Employee
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/profile/student/class_reassign">
+														<i class="icon-social-dropbox"></i>
+															 Re-assign Class
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/release_request/release_report/">
+														<i class="icon-list"></i>
+															 Release Report
+														</a></li>
+														<li>
+														<a href="https://educationalschool.iteg.com.np/school_bell/recurring_schedule">
+														<i class="icon-list"></i>
+															 Recurring Schedule
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="javascript:void(0);">
+													<i class="icon-list"></i>
+														 LMS
+													</a><ul class="child-link">
+														<li>
+														<a href="https://educationalschool.iteg.com.np/lms">
+														<i class="icon-list"></i>
+															 Class Course List
+														</a></li></ul></li>
+													<li class="parent-menu-container">
+													<a href="https://educationalschool.iteg.com.np/events/eventscalander/academic">
+													<i class="icon-calendar"></i>
+														 Academic Calendar
+													</a></li></ul></div></li>	        </ul>
+	        <!-- END SIDEBAR MENU -->
+	    </div>
+	    <div class="clearfix"></div>
+	</div>
+
+	<!-- END SIDEBAR -->        <div class="page-tops">
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                                        <div class="search-form hidden-xs">
+                        <div class="input-group input-top">
+                            <span class="input-group-btn">
+                                <a href="https://educationalschool.iteg.com.np/profile/student/find" class="btn" title="search student">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                                        <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown dropdown-user z-index visible-sm visible-md visible-lg">
+                            <a href="javascript:;" class="dropdown-toggle notify" data-close-others="true">
+                                <img alt="" class="img-circle" src="https://educationalschool.iteg.com.np/uploads/thumbs/l250/a1.jpg" />
+                                <span class="username cap">
+                                    su.admin </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            
+                        </li>
+                        <li class="dropdown dropdown-user z-index visible-xs ">
+                            <a href="javascript:;" class="dropdown-toggle notify" data-close-others="true">
+                                <img alt="" class="img-circle" src="https://educationalschool.iteg.com.np/uploads/thumbs/l250/a1.jpg" />
+                            </a>
+                            
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <div class="clearfix"></div>
+    </header>
+    <!-- END HEADER -->
+    <!-- BEGIN CONTAINER -->
+    <div id="panel-overlay"></div>
+    <div class="page-container">
+         <!-- notification panel start -->
+         <section>
+             <aside class="sidebar inactive grid">
+                 <div id="panelHeading" class='heading'>
+                    <span class="pull-left">Notification</span>
+                    <span class="pull-right clear-notification hover" onclick="clearNotification()">Clear</span>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div id="notification_lists">
+                  </div>
+                  <div id="panelAction" class="action-btn-container">
+                    <a class="action-btn icon-btn" href="javascript:void(0);" style="text-transform: capitalize;">
+                        <i class="icon-user p-3"></i>
+                        <p>
+                            su_admin                        </p>
+                        
+                    </a>
+                
+                    <a class="action-btn icon-btn" href="https://educationalschool.iteg.com.np/theme_option/change_password">
+                        <i class="icon-key p-3"></i> <p>Change Password </p></a>
+               
+                    <a class="action-btn icon-btn" href="https://educationalschool.iteg.com.np/theme_option/user_account/settings">
+                        <i class="icon-key p-3"></i> <p>User Setting </p></a>
+                
+                    <a class="action-btn icon-btn" href="https://educationalschool.iteg.com.np/pages/logout">
+                        <i class="icon-lock p-3"></i> <p>Logout </p></a>
+                                
+                </div>
+             </aside>
+         </section>
+        <!-- notification panel end --> 
+        <!-- bottom menu panel in mobile view only  -->
+        <nav class="visible-xs">
+            <div class="mobile_menu">
+               <a class="mobile-menu-btn icon" href="https://educationalschool.iteg.com.np/theme_option/home" style="text-transform: capitalize;">
+                    <i class="icon-home "></i>
+                    
+                    
+                </a>
+            
+                <!--     <a class="mobile-menu-btn" href="https://educationalschool.iteg.com.np/theme_option/home/find_menu">
+                    <i class="icon-magnifier"></i> <p>Find Menu </p></a> -->
+            
+                <a class="mobile-menu-btn" href="https://educationalschool.iteg.com.np/profile/student/find">
+                    <i class="icon-magnifier "></i></a>
+           
+                <a class="mobile-menu-btn" href="https://educationalschool.iteg.com.np/theme_option/user_account/settings">
+                    <i class="icon-key "></i></a>
+            
+                <a class="mobile-menu-btn notify" href="javascript:void(0)">
+                    <i class="fa fa-list "></i></a>
+            </div>
+        </nav>
+        <!-- end bottom menu panel -->		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<div class="page-bar">
+					<ul class="page-breadcrumb">
+						<li>
+							<i class="fa fa-home text-primary"></i>
+							<a href="javascript:void(0);">Dashboard</a>
+						</li>
+					</ul>
+					<div class="page-toolbar">
+			        	<a href="javascript:history.go(-1)">
+			        		<div id="dashboard-report-range" class="tooltips btn btn-fit-height btn-sm green-haze btn-dashboard-daterange" data-container="body" data-placement="left">  Back </div>
+				    	</a>
+				    </div>
+				</div>
+				<!-- END PAGE HEADER-->
+				<!-- BEGIN DASHBOARD STATS -->
+				<div class="row">
+					<!-- BEGIN PORTLET-->
+					<div class="portlet light no-shadow">
+						<div class="portlet-body">
+							<div class="row ed_card-boxes manage">
+								<div class="blur-container"></div>
+                <!-- Box -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="card-box">
+                    <div class="card-title">
+                        <h2>Manage Student</h2>
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Total Students: 258</li>
+                        <li>Male: 117</li>
+                        <li>Female: 141</li>
+                      </ul>
+                      <a href="https://educationalschool.iteg.com.np/profile/student/manage" class="select">
+                            <span>Details</span>
+                      </a>
+                      <span class="green"><i class="icon icon-box-student"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="card-box">
+                    <div class="card-title">
+                        <h2>Manage Employee</h2>
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Total Employee: 258</li>
+                        <li>Male: 117</li>
+                        <li>Female: 141</li>
+                      </ul>
+                      <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
+                            <span>Details</span>
+                      </a>
+                      <span class="gray"><i class="icon icon-box-profile"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="card-box">
+                    <div class="card-title">
+                        <h2>Manage Lesson Plan</h2>
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Total Lesson Plan: 79</li>
+                      </ul>
+                      <a href="https://educationalschool.iteg.com.np/lesson_plan" class="select">
+                            <span>Details</span>
+                      </a>
+                      <span class="blue"><i class="icon icon-box-plan"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="card-box">
+                    <div class="card-title">
+                        <h2>Manage Student Attendance</h2>
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>School Days: 102</li>
+                        <li>Present Percent: 44%</li>
+                      </ul>
+                      <a href="https://educationalschool.iteg.com.np/reports/academic_report/pmf_attendance_report" class="select">
+                            <span>Details</span>
+                      </a>
+                      <span class="light"><i class="icon icon-box-confirm"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Box -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="card-box">
+                    <div class="card-title">
+                        <h2>Manage Class Period</h2>
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Total Classes: 110</li>
+                        <li>Total Teacher: 11</li>
+                      </ul>
+                      <a href="https://educationalschool.iteg.com.np/classes/class_period" class="select">
+                            <span>Details</span>
+                      </a>
+                      <span class="red"><i class="icon icon-box-layers"></i></span>
+                    </div>
+                  </div>
+                </div>
+							</div>
+							<!-- START LESSONS & STATISTICS -->
+                <div class="row ed_card-boxes">
+                        <!-- Box -->
+                        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                          <div class="card-box">
+                            <div class="card-title">
+                              <h2>Upcoming Lesson Plans</h2>
+                              <a href="#" class="select">
+                                <span class="icon icon-dots"></span>
+                              </a>
+                            </div>
+                            <div class="card-content d-flex">
+                              <ul>
+                                <li class="row">
+                                  <div class="card-element col-sm-3 col-lg-3">
+                                    <img class="card-avatar" src="assets/img/users/avatar-1.jpg" alt="user" />
+                                  </div>
+                                  <div class="card-element col-sm-6 col-lg-5">
+                                    <h3>English</h3>
+                                    <p>
+                                      <a href="#" class="location">
+                                        <span class="icon icon-location"></span>
+                                      </a>
+                                      <small>CC.012 Class</small>
+                                    </p>
+                                  </div>
+                                  <div class="card-element col-sm-3 col-lg-4">
+                                    <a href="#" class="edit">
+                                      <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="delete">
+                                      <span class="icon icon-delete"></span>
+                                    </a>
+                                  </div>
+                                </li>
+                                <li class="row">
+                                  <div class="card-element col-sm-3 col-lg-3">
+                                    <img class="card-avatar" src="assets/img/users/avatar-2.jpg" alt="user" />
+                                  </div>
+                                  <div class="card-element col-sm-6 col-lg-5">
+                                    <h3>English</h3>
+                                    <p>
+                                      <a href="#" class="location">
+                                        <span class="icon icon-location"></span>
+                                      </a>
+                                      <small>CC.012 Class</small>
+                                    </p>
+                                  </div>
+                                  <div class="card-element col-sm-3 col-lg-4">
+                                    <a href="#" class="edit">
+                                      <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="delete">
+                                      <span class="icon icon-delete"></span>
+                                    </a>
+                                  </div>
+                                </li>
+                                <li class="row">
+                                  <div class="card-element col-sm-3 col-lg-3">
+                                    <img class="card-avatar" src="assets/img/users/avatar-3.jpg" alt="user" />
+                                  </div>
+                                  <div class="card-element col-sm-6 col-lg-5">
+                                    <h3>English</h3>
+                                    <p>
+                                      <a href="#" class="location">
+                                        <span class="icon icon-location"></span>
+                                      </a>
+                                      <small>CC.012 Class</small>
+                                    </p>
+                                  </div>
+                                  <div class="card-element col-sm-3 col-lg-4">
+                                    <a href="#" class="edit">
+                                      <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="delete">
+                                      <span class="icon icon-delete"></span>
+                                    </a>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="card-all">
+                              <a href="#">view all +</a>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Box -->
+                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                          <div class="card-box overflow">
+                            <div class="card-title">
+                              <h2>Visitor Statistics</h2>
+                              <div class="user-profile">
+                                <div class="profile-tag">
+                                  <span>Custom range</span>
+                                  <span class="icon-arrow-gray"></span>
+                                </div>
+                                <div class="user-menu">
+                                  <ul>
+                                    <li>
+                                      <a href="#">Last 7 days</a></li>
+                                    </li>
+                                    <li>
+                                      <a href="#">Last 28 days</a></li>
+                                    </li>
+                                    <li>
+                                      <a href="#">Last 90 days</a></li>
+                                      </li>
+                                    <li>
+                                      <a href="#">Last 365 days</a></li>
+                                    </li>
+                                    <li>
+                                      <a href="#">This year</a></li>
+                                    </li>
+                                  </ul>
+                                  <ul>
+                                    <li>
+                                      <a href="#">2020.</a></li>
+                                    </li>
+                                    <li>
+                                      <a href="#">2019.</a></li>
+                                     </li>
+                                  </ul>
+                                  <ul>
+                                    <li>
+                                      <a href="#">September</a></li>
+                                    </li>
+                                    <li>
+                                      <a href="#">August</a></li>
+                                    </li>
+                                    <li>
+                                      <a href="#">July</a></li>
+                                    </li>
+                                  </ul>
+                                  <ul>
+                                    <li>
+                                      <a href="#">Custom range</a></li>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <canvas
+                                id="ed_barChart"
+                              ></canvas>
+                            </div>
+                        </div>
+                        </div>
+                </div>						
+					    <!-- END LESSONS & STATISTICS -->
+						</div>
+					</div>
+					<!-- END PORTLET-->
+				</div>
+				<!-- END DASHBOARD STATS -->
+				<div class="clearfix">
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT -->
+		<!-- BEGIN QUICK SIDEBAR -->
+		<!-- END QUICK SIDEBAR -->
+	</div><!-- END page-container -->
+
+   <!-- END CONTAINER -->
+   <!-- BEGIN FOOTER -->
+  <div class="page-footer">
+      <div class="page-footer-inner text-center">
+          2020 &copy; Ed-Intelligence      </div>
+      <div class="scroll-to-top">
+         <i class="icon-arrow-up"></i>
+      </div>
+   </div>
+   <!-- END FOOTER -->
+<div id="popDialog" class="popDialog" style="min-width:450px; min-height:300px;visibility: hidden;">
+  <div class="popTitlebar" id="forjsontitle"></div>
+  <button name="close"><!-- enter symbol here like &times; or &#x1f6c8; or use the default X if empty --></button>
+  <div class="popContent">
+    <p id="forjson" style="font-size:14px;font-weight: 400;color:black;"></p>
+  </div>
+  <div class="buttonpane" style="width: 448px;">
+    <div class="buttonset text-center">
+      <button name="btnGotit">Got it !</button>
+    </div>
+  </div>
+</div>
+<script src="https://educationalschool.iteg.com.np/assets/admin/layout2/scripts/helpfile.js" type="text/javascript"></script>
+<script src="https://educationalschool.iteg.com.np/assets/global/scripts/helper.js" type="text/javascript"></script>
+<script src="https://educationalschool.iteg.com.np/assets/global/scripts/ticker.js"></script>
+<script src="https://educationalschool.iteg.com.np/assets/global/scripts/ticker.min.js"></script>
+<script>
+    // sweetalert confirmation dialog end
+    jQuery(document).ready(function() {   
+        Metronic.init(); // init metronic core componets
+        Layout.init(); // init layout
+        Demo.init(); // init demo features  
+
+        listNotification();//load notification in panel 
+           });
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
+<script>
+  /*
+   function to navigate through arrow key in tabular form
+*/
+jQuery.fn.ForceNumericOnly = function() {
+    return this.each(function() {
+        //restrict other aplhabet except number
+        $(this).keydown(function(e) {
+            var key = e.charCode || e.keyCode || 0;
+            // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
+            // home, end, period, and numpad decimal
+            return (key == 8 || key == 9 || key == 13 || key == 46 || key == 110 || key == 190 || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+        });
+    });
+};
+(function($){
+    // sweetalert confirmation dialog start
+    $('body').on('click','.confirmation_dialog', function(e){
+        e.preventDefault();
+        const url = $(this).attr('href');
+        Swal.fire({
+          title: 'Confirmation',
+          text: "Do you want to delete?",
+          icon: 'none',
+          showCancelButton: true,
+          confirmButtonText: 'Ok',
+          buttonsStyling: false,
+          customClass: {
+            container: 'alertbox-container',
+            content: 'alertbox-content',
+            confirmButton: 'btn btn-info',
+            cancelButton: 'btn btn-default'
+          }
+        }).then((result) => {
+          if (result.value) {
+              // if the value is true,
+              window.location.href= url;
+          }
+        });
+    });
+    $(".num_only").ForceNumericOnly();
+  
+    $('.date-picker').attr('autocomplete','off');
+    /*
+      for change password
+    */
+    $( "#changepass" ).submit(function( e ) {
+        //e.preventDefault();
+        const pass=$('#pass').val();
+        const con_pass=$('#repass').val();
+        if(pass==con_pass)
+        {
+            $( "#changepass" ).submit();
+        }
+        else
+        {
+            //alert('not same');
+            $( "#conf-pass" ).addClass('has-error');
+            $( "#error_pass" ).show();
+            return false;
+        }
+    });
+    /*
+    for menu icons
+     */
+    $('.item-ico').click(function(){
+        const value=$(this).children('span').attr('class');
+        if($('#target_content').val() != "")
+            $target_id = $('#target_content').val() ;
+        else
+            $target_id = "#menu-ico" ;
+        $($target_id).val(value);
+        $('#selected_icon').click();
+    });
+        //notification panel toggle
+    $(".notify").click(function () {
+      //console.log("toggling sidebar");
+        $(".sidebar").toggleClass('active');
+        $("#panel-overlay").toggleClass('active');
+    });
+    $('#panel-overlay').click(()=>{
+      $(".sidebar").removeClass('active');
+      $("#panel-overlay").removeClass('active');
+    });
+    //nofitication card deletion event
+    $('#notification_lists').on('click',".cancel",function () {
+        const index = $(this).data('id');
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.notifications) {
+                let prevNotifications = JSON.parse(localStorage.notifications);
+                delete prevNotifications[index];
+                localStorage.notifications = JSON.stringify(prevNotifications);
+            } 
+        } 
+        animateRemove($(this).parent());
+    });
+    //message_toastr('info',{message:"test<a href='google.com'>here</a>"},{option:{"positionClass": "toast-top-right","timeOut": 8000,}});
+    $('.theamer').click(function(){
+       const option= $(this).attr('data-style');
+       $.post( 'https://educationalschool.iteg.com.np/pages/theme_option/set_theme',
+        {
+          option:option,
+          user:'su_admin'
+        })
+        .done(function(result) {
+         console.log("successful theme changed");
+        })
+        .fail(function() {
+          console.log("error");
+        })
+    });
+    //popup image model
+    $('.pop-img').click(function()
+    {
+      const src=$(this).attr('data-img-path');
+      $('#model-img').attr('src', src);
+    });
+    //reset modal form on close
+    $('.modal').on('hidden.bs.modal', function(){
+        if($(this).find('form').hasClass('reset-modal'))
+        {
+            $(this).find('form.reset-modal')[0].reset();
+            $(this).find('form.reset-modal select option:selected').removeAttr('selected');
+        }
+    });
+    //dynamic load table value to model pop up for edit
+    $('body').on('click', '.edit_opt', function(){
+        const data_info = $(this).attr('data-info'); 
+        const data_obj = JSON.parse(data_info);
+        let multijs = false;
+        for (let key in data_obj) {
+          if (data_obj.hasOwnProperty(key)) {
+           const key_chk = strSplit(key,"_");
+
+            if($('#opt_'+key).prop('type') == 'checkbox' && $('#opt_'+key).prop('value') == data_obj[key] )
+            {
+              $('#opt_'+key).attr('checked','checked');
+              $('#opt_'+key).closest('span').addClass('checked');
+            }
+            else if($('#opt_'+key).prop('type') == 'checkbox' && $('#opt_'+key).prop('value') != data_obj[key] )
+            {
+              $('#opt_'+key).removeAttr('checked');
+              $('#opt_'+key).closest('span').removeClass('checked');
+            }
+            else if(key_chk.indexOf("radio") != -1 )
+            {
+              const keyVal = data_obj[key];
+              $('#'+key+' [type=radio][value='+keyVal+']').attr('checked','checked');
+            }
+            else if($('#opt_'+key).prop('type') == 'select-multiple'){
+              let arrVal = data_obj[key].split(',');
+              //in case form consist of multiple select
+              $.each( arrVal, function( alt, value ) {
+                if(value != '')
+                 $('#opt_'+key).find('option[value='+value+']').attr('selected','selected');
+              });
+              //in case form consist of multiple select js
+              if($('#opt_'+key).hasClass('cstm-select-simple'))
+                $($('#opt_'+key)).multiselect( 'reset' );
+            }
+            else{
+              $('#opt_'+key).val(data_obj[key]);
+            }
+          }
+        }
+    });
+    //load dynamic ajax script from controller
+        $('#section_id').change(function()
+    {
+       $( '#semester' ).trigger( 'change' );
+    })
+    sessionStorage.setItem('referral_url', window.location.pathname);
+})(jQuery);
+  
+     
+    $('.modal').on('shown.bs.modal', () => {
+    //console.log('modal call')
+    //$('body').removeClass('modal-open');
+    //$('.modal-backdrop').remove();
+    });
+
+    var validMessageTime = function(date1) {
+      let dt1 = new Date(date1);
+      let dt2 = new Date();
+      dt2 = new Date(dt2.toLocaleDateString('en-US', {timeZone: 'America/New_York'}));
+      return Math.floor((dt2.getTime() - dt1.getTime() ) /(1000));
+      }
+
+
+  // ADDED START
+  // BAR CHART
+  let dataBarChart = {
+    labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+    datasets: [{
+      data: [31, 39, 31, 50, 42, 25, 53, 42, 39, 25, 20, 34, 35],
+      backgroundColor: [
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)',
+        'rgba(3, 105, 168, 1)'
+      ],
+      borderWidth: 0
+    }]
+  };
+  let optionsBarChart = {
+    legend: {
+      display: false
+    },
+    responsive: true,
+    cornerRadius: 100,
+    animation: {
+      animateScale: true
+    },
+    scales: {
+      xAxes: [{
+        barPercentage: 1,
+        categoryPercentage: 1,
+        maxBarThickness: 22
+      }],
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+    tooltips: {
+      yAlign: 'bottom',
+      backgroundColor: '#fff',
+      borderColor: '#e5e5e5',
+      titleFontColor: "#0264a0",
+      borderWidth: 1,
+      titleFontSize: 16,
+      xPadding:15,
+      yPadding:15,
+      displayColors: false,
+      callbacks: {
+          label: function(tooltipItem) {
+              return Number(tooltipItem.yLabel) + "k Subscribers in this year!";
+          }
+      },
+      bodyFontColor: '#ababab'
+    }
+  };
+
+  let ctx = document.getElementById("ed_barChart");
+  let myBarChart = new Chart(ctx, {
+      type: 'bar',
+      data: dataBarChart,
+      options: optionsBarChart
+  });
+  // ADDED END
+
+</script>
