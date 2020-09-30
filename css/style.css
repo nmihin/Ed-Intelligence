@@ -674,3 +674,61 @@ li:hover .megamenu,
 	width: 6px!important;
 	margin: 0 2px 1px 0!important;
 }
+
+
+/*  Search menu */
+ul#search-menu {
+    width: 100%;
+    position: relative;
+    font-size: 12px;
+    position: relative;
+    z-index: 500;
+    background-color: #eff1f2;
+	*zoom: 1;
+    text-align: center;
+	margin: auto; padding: auto;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    display: block;
+    padding:0;
+    float: left;
+    padding:25px;
+    }
+
+ul#search-menu ul {
+  padding:0;
+}
+
+ul#search-menu li {
+
+    list-style-type: none;
+
+    text-align:left;
+    }
+
+ul#search-menu h2 {
+  text-align:left;
+}
+
+ul#search-menu h3 {
+  text-align:left;
+}
+
+ul#search-menu > li > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+ul#search-menu > li > ul > li {
+  box-sizing: border-box;
+  max-width: 50%;
+}
+
+
+ul#search-menu > li > ul > li a {
+  color:#7bc5f2; 
+}
