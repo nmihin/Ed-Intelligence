@@ -58,6 +58,521 @@
 
     <script src="js/script.js"></script>
 
+    <style>
+    /* Cards */
+    @font-face {
+      font-family: 'icomoon';
+      src:  url('fonts/icons/icomoon.eot?j3btqh');
+      src:  url('fonts/icons/icomoon.eot?j3btqh#iefix') format('embedded-opentype'),
+        url('fonts/icons/icomoon.woff2?j3btqh') format('woff2'),
+        url('fonts/icons/icomoon.ttf?j3btqh') format('truetype'),
+        url('fonts/icons/icomoon.woff?j3btqh') format('woff'),
+        url('fonts/icons/icomoon.svg?j3btqh#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon-arrow:before {
+      content: "\e900";
+      color: #fff;
+    }
+    .icon-arrow-gray:before {
+      content: "\e901";
+      color: #818181;
+    }
+    .icon-attendence:before {
+      content: "\e902";
+      color: #fff;
+    }
+    .icon-box-confirm:before {
+      content: "\e903";
+      color: #fff;
+    }
+    .icon-box-layers:before {
+      content: "\e904";
+      color: #fff;
+    }
+    .icon-box-plan:before {
+      content: "\e905";
+      color: #fff;
+    }
+    .icon-box-profile:before {
+      content: "\e906";
+      color: #fff;
+    }
+    .icon-box-student:before {
+      content: "\e907";
+      color: #fff;
+    }
+    .icon-btn-arrow:before {
+      content: "\e908";
+      color: #fff;
+    }
+    .icon-classroom:before {
+      content: "\e909";
+      color: #fff;
+    }
+    .icon-confirm:before {
+      content: "\e90a";
+      color: #fff;
+    }
+    .icon-delete:before {
+      content: "\e90b";
+      color: #c0392b;
+    }
+    .icon-dots:before {
+      content: "\e90c";
+      color: #a6a6a6;
+    }
+    .icon-edit:before {
+      content: "\e90d";
+      color: #22a15a;
+    }
+    .icon-home:before {
+      content: "\e90e";
+      color: #fff;
+    }
+    .icon-layers:before {
+      content: "\e90f";
+      color: #fff;
+    }
+    .icon-location:before {
+      content: "\e910";
+      color: #fff;
+    }
+    .icon-mail:before {
+      content: "\e911";
+      color: #dfdfdf;
+    }
+    .icon-manage:before {
+      content: "\e912";
+      color: #fff;
+    }
+    .icon-m-notification:before {
+      content: "\e913";
+      color: #9b9b9b;
+    }
+    .icon-m-off:before {
+      content: "\e914";
+      color: #9b9b9b;
+    }
+    .icon-m-password:before {
+      content: "\e915";
+      color: #9b9b9b;
+    }
+    .icon-m-profile:before {
+      content: "\e916";
+      color: #9b9b9b;
+    }
+    .icon-m-settings:before {
+      content: "\e917";
+      color: #9b9b9b;
+    }
+    .icon-pass:before {
+      content: "\e918";
+      color: #dfdfdf;
+    }
+    .icon-plan:before {
+      content: "\e919";
+      color: #fff;
+    }
+    .icon-profile:before {
+      content: "\e91a";
+      color: #fff;
+    }
+    .icon-reports:before {
+      content: "\e91b";
+      color: #fff;
+    }
+    .icon-search:before {
+      content: "\e91c";
+      color: #fff;
+    }
+    .icon-settings:before {
+      content: "\e91d";
+      color: #fff;
+    }
+    .icon-student:before {
+      content: "\e91e";
+      color: #fff;
+    }
+
+
+    .ed_card-boxes .card-box {
+      min-height: 220px;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 10px 0 10px 0;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+      margin-bottom: 25px;
+    }
+
+    .ed_card-boxes .user-profile:hover .user-menu {
+        opacity: 1;
+        z-index: 1111;
+    }
+
+    .ed_card-boxes .card-title {
+      font-size: 20px;
+      height: 40px;
+      padding-left: 50px;
+    }
+
+    .ed_card-boxes .card-title h2 {
+      max-width: 85%;
+      line-height: 1.25;
+      float:left;
+      font-size: 21px;
+    }
+
+    .ed_card-boxes .card-box > a {
+      font-size: 0.875em;
+      color: #111111;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      color: #2980b9;
+      line-height: 1.3em;
+    }
+
+    .ed_card-boxes .card-box .icon {
+      position: relative;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 7px;
+    }
+
+    .ed_card-boxes .card-box .profile-tag {
+      background-color: #f8fbff;
+      border-radius: 25px;
+      padding: 5px 20px;
+      border:1px solid #e2e6eb;
+      position: relative;
+      top:10px;
+      right: 30px;
+      float: right;
+      cursor: pointer;
+    }
+
+    .ed_card-boxes .card-box .profile-tag > span {
+      color: #000;
+      font-size: 14px;
+      margin-top:0;
+    }
+
+    .ed_card-boxes .card-box .profile-tag > img {
+        margin-bottom: -3px;
+    }
+
+    .ed_card-boxes .card-box .user-menu {
+      background-color:#02609b;
+      border-radius: 15px;
+      padding: 15px 0;
+      margin-top:0;
+      right: 30px;
+      width: 200px;
+      position: absolute;
+      top: 55px;
+      opacity: 0;
+      z-index: -1;
+      list-style: none;
+    }
+
+    .ed_card-boxes .card-box .user-menu li {
+      padding: 5px 0; 
+      width: 100%;
+      display: block;
+      background-color:transparent;
+      border:none;
+    }
+
+    .ed_card-boxes .card-box .user-menu ul {
+      border-bottom: 1px solid #67a0c3;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    .ed_card-boxes .card-box .user-menu ul:last-child {
+      border:none;
+
+    }
+
+    .ed_card-boxes .card-box .user-menu li:hover {
+      background-color:#67a0c3;
+    }
+
+
+    .ed_card-boxes .card-box .user-menu li > a {
+      color: #fff;
+      font-size: 15px;
+      padding: 0 25px;
+      font-weight: 500;
+    }
+
+    .ed_card-boxes .select {
+        position: absolute;
+        right: 30px;
+        top: 35px;
+    }
+
+    .ed_card-boxes .delete .icon, 
+    .ed_card-boxes .edit .icon
+    {
+        -webkit-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+        -moz-box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+        box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.37);
+        margin-left:10px;
+        margin-bottom: 10px;
+    }
+
+    .ed_card-boxes .delete .icon:hover, 
+    .ed_card-boxes .edit .icon:hover,
+    .ed_card-boxes .location .icon:hover
+    {
+      opacity:0.8;
+    }
+
+    .ed_card-boxes .location {
+      width:30px;
+      height:30px;
+      float: left;
+    }
+
+    .ed_card-boxes .location .icon {
+      background-color:#2980b9;
+    }
+
+    .ed_card-boxes .card-content {
+      padding-left: 50px;
+    }
+
+    .ed_card-boxes .card-box.overflow {
+      overflow:visible;
+    }
+
+    .ed_card-boxes .card-content > ul {
+      display: block;
+      float: left;
+        width: 100%;
+        padding: 0;
+    }
+
+    .ed_card-boxes .card-content > ul > li {
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      padding: 5px 0px 15px 0;
+      border-bottom: 1px solid #e6e6e8;
+    }
+
+    .ed_card-boxes .card-content .card-element {
+        font-size: 12px;
+        line-height: 1.2;
+        color: #fff;
+        font-weight: 500;
+        display: block;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .ed_card-boxes .card-content .card-element a {
+      text-decoration: none !important;
+    }
+
+    .ed_card-boxes .card-content #ed_barChart {
+      padding-right: 20px;
+    }
+
+    .ed_card-boxes .card-element h3 {
+      color:#000;
+      display: block;
+      font-weight: 500;
+        float: left;
+        font-size:16px;
+        width: 100%;
+        line-height: 1.5;
+        padding:3px 0;
+    }
+
+    .ed_card-boxes .card-element p {
+      display: block;
+        float: left;
+        width: 100%;
+    }
+
+    .ed_card-boxes .card-element small {
+        color: #000;
+        position: relative;
+        top: 7px;
+        float: left;
+        left: 7px;
+    }
+
+    .ed_card-boxes .card-all {
+        margin: 25px auto;
+        float: left;
+        text-align: center;
+        width:100%;
+    }
+
+    .ed_card-boxes .card-all a {
+      color:#025f9a;
+      padding:15px 0;
+      font-weight: 300;
+    }
+
+    .ed_card-boxes .card-all a:hover {
+      color: #0799f5;
+    }
+
+    .ed_card-boxes .card-element .card-avatar {
+      border-radius: 50%;
+      width: auto; 
+      width: 100%;
+    }
+    .ed_card-boxes .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .ed_card-boxes  .svg-content-responsive {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+
+    .ed_card-boxes.manage .card-content > ul > li {
+      border-bottom:0;
+      padding: 5px 0px 5px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .ed_card-boxes.manage .card-title {
+        padding-left: 65px;
+        color: #025f9a;
+    }
+
+    .ed_card-boxes.manage .card-title h2 {
+        font-size: 21px;
+    }
+
+    .ed_card-boxes.manage .card-content {
+          padding-left: 65px;
+    }
+
+    .ed_card-boxes.manage .card-box .icon {
+        position: absolute;
+        left: 14px;
+        right: auto;
+        top: 19px;
+        font-size: 22px;
+    }
+
+    .ed_card-boxes.manage .card-content > span {
+      position: absolute;
+      width:60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #ccc;
+      top:-19px;
+      left: -14px;
+    }
+
+    .ed_card-boxes.manage .card-content > span.green {
+      background:#16a085;
+    }
+    .ed_card-boxes.manage .card-content > span.gray {
+      background:#34495e;
+    }
+    .ed_card-boxes.manage .card-content > span.blue {
+      background:#2980b9;
+    }
+    .ed_card-boxes.manage .card-content > span.light {
+      background:#7f8c8d;
+    }
+    .ed_card-boxes.manage .card-content > span.red {
+      background:#c0392b;
+    }
+
+    .ed_card-boxes.manage .card-content > a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      top: auto;
+      color:#025f9a;
+      font-weight: bold;
+    }
+
+    .ed_card-boxes.manage .card-content > a:hover {
+      color: #0799f5;
+    }
+
+    @media only screen and (max-width:1100px){
+      .ed_card-boxes.manage > div {
+        width: 33.33%;
+      }
+    }
+
+    @media only screen and (max-width:768px){
+       .ed_card-boxes.manage > div {
+        width: 50%;
+      } 
+      .ed_card-boxes .card-box .user-menu {
+        width: 340px;
+      }
+
+      .ed_card-boxes .card-box .user-menu > ul{
+        width:50%;
+        float: left;
+        border:0;
+      }
+
+      .ed_card-boxes .card-box .user-menu li {
+        padding: 2px 0;
+      }
+    }
+
+    @media only screen and (max-width:620px){
+      .ed_card-boxes.manage > div {
+        width: 100%;
+      }  
+    }
+
+    .portlet-body {
+      overflow-x: hidden !important;
+    }
+    </style>
+    <!--ADDED END-->
+
   </head>
 
   <body>
@@ -141,6 +656,119 @@
 
       <!-- Main Content -->
       <div class="main-content">
+
+        <div class="container">
+          <div class="row ed_card-boxes manage">
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <div class="row">
+                  <!-- Box -->
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="card-box">
+                      <div class="card-title">
+                          <h2>Manage Student</h2>
+                      </div>
+                      <div class="card-content">
+                        <ul>
+                          <li>Total Students: 258</li>
+                          <li>Male: 117</li>
+                          <li>Female: 141</li>
+                        </ul>
+                        <a href="https://educationalschool.iteg.com.np/profile/student/manage" class="select">
+                              <span>Details</span>
+                        </a>
+                        <span class="green"><i class="icon icon-box-student"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Box -->
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="card-box">
+                      <div class="card-title">
+                          <h2>Manage Employee</h2>
+                      </div>
+                      <div class="card-content">
+                        <ul>
+                          <li>Total Employee: 258</li>
+                          <li>Male: 117</li>
+                          <li>Female: 141</li>
+                        </ul>
+                        <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
+                              <span>Details</span>
+                        </a>
+                        <span class="gray"><i class="icon icon-box-profile"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Box -->
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="card-box">
+                      <div class="card-title">
+                          <h2>Manage Employee</h2>
+                      </div>
+                      <div class="card-content">
+                        <ul>
+                          <li>Total Employee: 258</li>
+                          <li>Male: 117</li>
+                          <li>Female: 141</li>
+                        </ul>
+                        <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
+                              <span>Details</span>
+                        </a>
+                        <span class="gray"><i class="icon icon-box-profile"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Box -->
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="card-box">
+                      <div class="card-title">
+                          <h2>Manage Employee</h2>
+                      </div>
+                      <div class="card-content">
+                        <ul>
+                          <li>Total Employee: 258</li>
+                          <li>Male: 117</li>
+                          <li>Female: 141</li>
+                        </ul>
+                        <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
+                              <span>Details</span>
+                        </a>
+                        <span class="gray"><i class="icon icon-box-profile"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="row">
+                  <div class="box-title d-flex justify-content-between align-items-center">
+                    <h2><a href="#">Latest News & Updates</a></h2>
+                  </div>
+                  <div class="aside-box">
+                    <figure>
+                      <a href="#">
+                        <img src="assets/img/learning.jpg" alt="learning">
+                      </a>
+                    </figure>
+                    <div class="item-content">
+                      <span class="language">English</span>
+                      <span>/</span>
+                      <span class="date">Sep 11.2020</span>
+                      <h3>Our Current House Tour Modern Farm house Style in the Suburbs</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="box-title d-flex justify-content-between align-items-center">
+                    <h2><a href="#">Calendar</a></h2>
+                  </div>
+                  <div class="aside-box">
+                    <div id="datepicker-inline"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
 
         <div class="container">
           <div class="row">
