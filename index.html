@@ -226,6 +226,12 @@
       margin-bottom: 25px;
     }
 
+    .ed_card-boxes.lessons .card-box {
+      padding: 0;
+      overflow: visible;
+      margin-right: 4%;
+    }
+
     .ed_card-boxes .user-profile:hover .user-menu {
         opacity: 1;
         z-index: 1111;
@@ -331,9 +337,18 @@
     }
 
     .ed_card-boxes .select {
-        position: absolute;
-        right: 30px;
-        top: 35px;
+      position: absolute;
+      right: 30px;
+      top: 35px;
+    }
+
+    .ed_card-boxes.lessons .select {
+      font-size: 14px;
+      font-weight: bold;
+      position: absolute;
+      right: 15%;
+      top: 10%;
+      line-height: 1.5;
     }
 
     .ed_card-boxes .delete .icon, 
@@ -376,6 +391,7 @@
       float: left;
         width: 100%;
         padding: 0;
+        margin-bottom:0;
     }
 
     .ed_card-boxes .card-content > ul > li {
@@ -383,10 +399,14 @@
       line-height: 1.2;
       font-weight: 500;
       display: inline-flex;
-      align-items: center;
+      align-items: baseline;
       width: 100%;
       padding: 5px 0px 15px 0;
       border-bottom: 1px solid #e6e6e8;
+    }
+
+    .ed_card-boxes .card-content > ul > li:nth-child(odd) {
+      background-color: #f1f9ff;
     }
 
     .ed_card-boxes .card-content .card-element {
@@ -469,35 +489,46 @@
         left: 0;
     }
 
-    .ed_card-boxes.manage .card-content > ul > li {
+    .ed_card-boxes.lessons .card-content > ul > li {
       border-bottom:0;
-      padding: 5px 0px 5px 0;
+      padding: 5px 0px 5px 10%;
       font-weight: bold;
       font-size: 14px;
     }
 
-    .ed_card-boxes.manage .card-title {
-        padding-left: 65px;
+    .ed_card-boxes.lessons .card-title {
+        padding-left: 10%;
         color: #025f9a;
+        height:60px;
     }
 
-    .ed_card-boxes.manage .card-title h2 {
+    .ed_card-boxes.lessons .card-title h2 {
         font-size: 21px;
+        font-weight: bold;
     }
 
-    .ed_card-boxes.manage .card-content {
-          padding-left: 65px;
+    .ed_card-boxes.lessons .card-content {
+      padding-left: 0;
+      padding-bottom: 21px;
+      float: left;
+      width: 100%;
+      background-color: #fff;
     }
 
-    .ed_card-boxes.manage .card-box .icon {
-        position: absolute;
-        left: 14px;
-        right: auto;
-        top: 19px;
+    .ed_card-boxes.lessons .card-box .icon {
+        top:-10px;
+        margin: 8px auto;
+        height:44px;
+        display: block;
+        margin: 0 auto;
+        width:44px;
+        padding: 12px;
+        background-color: #2980b9;
         font-size: 22px;
+        padding: 10px;
     }
 
-    .ed_card-boxes.manage .card-content > span {
+    .ed_card-boxes.lessons .card-content > span {
       position: absolute;
       width:60px;
       height: 60px;
@@ -507,23 +538,28 @@
       left: -14px;
     }
 
-    .ed_card-boxes.manage .card-content > span.green {
+    .ed_card-boxes.lessons .card-content > ul > li > h3 {
+      margin: 0;
+      padding: 10px 50px 10px 0;
+    } 
+
+    .ed_card-boxes.lessons .card-content > span.green {
       background:#16a085;
     }
-    .ed_card-boxes.manage .card-content > span.gray {
+    .ed_card-boxes.lessons .card-content > span.gray {
       background:#34495e;
     }
-    .ed_card-boxes.manage .card-content > span.blue {
+    .ed_card-boxes.lessons .card-content > span.blue {
       background:#2980b9;
     }
-    .ed_card-boxes.manage .card-content > span.light {
+    .ed_card-boxes.lessons .card-content > span.light {
       background:#7f8c8d;
     }
-    .ed_card-boxes.manage .card-content > span.red {
+    .ed_card-boxes.lessons .card-content > span.red {
       background:#c0392b;
     }
 
-    .ed_card-boxes.manage .card-content > a {
+    .ed_card-boxes.lessons .card-content > a {
       position: absolute;
       bottom: 20px;
       right: 20px;
@@ -532,18 +568,72 @@
       font-weight: bold;
     }
 
-    .ed_card-boxes.manage .card-content > a:hover {
+    .ed_card-boxes.lessons .card-content > a:hover {
       color: #0799f5;
     }
 
+    .ed_card-boxes.lessons .card-weeks {
+      position: absolute;
+      right: -20px;
+      width:60px;
+      top:10%;
+      height:100%;
+      border-radius:10px;
+      background-color: #f1f9ff;
+      border:1px solid #d6d6d6;
+      width: 50px;
+    }
+
+    .ed_card-boxes.lessons .card-weeks ul {
+      height:100%;
+    }
+
+    .ed_card-boxes.lessons .card-weeks ul li {
+      height: 20%;
+      width: 100%;
+      float: left;
+      display: block;
+      text-align: center;
+      /* line-height: 2; */
+      padding: 10px 0;
+      font-weight: bold;
+      color: #025f9a;
+      border-bottom: 1px solid #d6d6d6;
+    }
+
+    .ed_card-boxes.lessons .card-weeks ul li:last-child {
+      border-bottom:0;
+    }
+
+    .ed_card-boxes.lessons .card-footer {
+      background-color: #025f9a;
+      padding-right: 10%;
+      padding-left: 10%;
+      height: 60px;
+      float: left;
+      width: 100%;
+      border-radius:10px;
+    }
+
+    .ed_card-boxes.lessons .card-footer span {
+      top:-8px;
+      position: relative;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      width: 100%;
+      float: left;
+      text-align: center;
+    }
+
     @media only screen and (max-width:1100px){
-      .ed_card-boxes.manage > div {
+      .ed_card-boxes.lessons > div {
         width: 33.33%;
       }
     }
 
     @media only screen and (max-width:768px){
-       .ed_card-boxes.manage > div {
+       .ed_card-boxes.lessons > div {
         width: 50%;
       } 
       .ed_card-boxes .card-box .user-menu {
@@ -562,7 +652,7 @@
     }
 
     @media only screen and (max-width:620px){
-      .ed_card-boxes.manage > div {
+      .ed_card-boxes.lessons > div {
         width: 100%;
       }  
     }
@@ -658,25 +748,55 @@
       <div class="main-content">
 
         <div class="container">
-          <div class="row ed_card-boxes manage">
+          <div class="row ed_card-boxes lessons">
               <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                 <div class="row">
                   <!-- Box -->
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="card-box">
                       <div class="card-title">
-                          <h2>Manage Student</h2>
+                          <h2>Newton</h2>
+                          <a href="https://educationalschool.iteg.com.np/profile/student/lessons" class="select">
+                                <span>OFF PERIOD</span>
+                          </a>
                       </div>
                       <div class="card-content">
                         <ul>
-                          <li>Total Students: 258</li>
-                          <li>Male: 117</li>
-                          <li>Female: 141</li>
+                          <li>
+                            <h3>Subject</h3>
+                            <span>English</span>
+                          </li>
+                          <li>
+                            <h3>Grade</h3>
+                            <span>Four</span>                         
+                          </li>
+                          <li>
+                            <h3>Period</h3>
+                            <span>1st Period</span>                            
+                          </li>
                         </ul>
-                        <a href="https://educationalschool.iteg.com.np/profile/student/manage" class="select">
-                              <span>Details</span>
-                        </a>
-                        <span class="green"><i class="icon icon-box-student"></i></span>
+                        <div class="card-weeks">
+                          <ul>
+                            <li>MO</li>
+                            <li>TU</li>
+                            <li>WE</li>
+                            <li>TH</li>
+                            <li>FR</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Lesson Plan</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Student List</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Attendance</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -684,18 +804,48 @@
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="card-box">
                       <div class="card-title">
-                          <h2>Manage Employee</h2>
+                          <h2>Newton</h2>
+                          <a href="https://educationalschool.iteg.com.np/profile/student/lessons" class="select">
+                                <span>OFF PERIOD</span>
+                          </a>
                       </div>
                       <div class="card-content">
                         <ul>
-                          <li>Total Employee: 258</li>
-                          <li>Male: 117</li>
-                          <li>Female: 141</li>
+                          <li>
+                            <h3>Subject</h3>
+                            <span>English</span>
+                          </li>
+                          <li>
+                            <h3>Grade</h3>
+                            <span>Four</span>                         
+                          </li>
+                          <li>
+                            <h3>Period</h3>
+                            <span>1st Period</span>                            
+                          </li>
                         </ul>
-                        <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
-                              <span>Details</span>
-                        </a>
-                        <span class="gray"><i class="icon icon-box-profile"></i></span>
+                        <div class="card-weeks">
+                          <ul>
+                            <li>MO</li>
+                            <li>TU</li>
+                            <li>WE</li>
+                            <li>TH</li>
+                            <li>FR</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Lesson Plan</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Student List</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Attendance</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -703,18 +853,48 @@
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="card-box">
                       <div class="card-title">
-                          <h2>Manage Employee</h2>
+                          <h2>Newton</h2>
+                          <a href="https://educationalschool.iteg.com.np/profile/student/lessons" class="select">
+                                <span>OFF PERIOD</span>
+                          </a>
                       </div>
                       <div class="card-content">
                         <ul>
-                          <li>Total Employee: 258</li>
-                          <li>Male: 117</li>
-                          <li>Female: 141</li>
+                          <li>
+                            <h3>Subject</h3>
+                            <span>English</span>
+                          </li>
+                          <li>
+                            <h3>Grade</h3>
+                            <span>Four</span>                         
+                          </li>
+                          <li>
+                            <h3>Period</h3>
+                            <span>1st Period</span>                            
+                          </li>
                         </ul>
-                        <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
-                              <span>Details</span>
-                        </a>
-                        <span class="gray"><i class="icon icon-box-profile"></i></span>
+                        <div class="card-weeks">
+                          <ul>
+                            <li>MO</li>
+                            <li>TU</li>
+                            <li>WE</li>
+                            <li>TH</li>
+                            <li>FR</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Lesson Plan</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Student List</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Attendance</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -722,18 +902,48 @@
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="card-box">
                       <div class="card-title">
-                          <h2>Manage Employee</h2>
+                          <h2>Newton</h2>
+                          <a href="https://educationalschool.iteg.com.np/profile/student/lessons" class="select">
+                                <span>OFF PERIOD</span>
+                          </a>
                       </div>
                       <div class="card-content">
                         <ul>
-                          <li>Total Employee: 258</li>
-                          <li>Male: 117</li>
-                          <li>Female: 141</li>
+                          <li>
+                            <h3>Subject</h3>
+                            <span>English</span>
+                          </li>
+                          <li>
+                            <h3>Grade</h3>
+                            <span>Four</span>                         
+                          </li>
+                          <li>
+                            <h3>Period</h3>
+                            <span>1st Period</span>                            
+                          </li>
                         </ul>
-                        <a href="https://educationalschool.iteg.com.np/profile/employee/manage" class="select">
-                              <span>Details</span>
-                        </a>
-                        <span class="gray"><i class="icon icon-box-profile"></i></span>
+                        <div class="card-weeks">
+                          <ul>
+                            <li>MO</li>
+                            <li>TU</li>
+                            <li>WE</li>
+                            <li>TH</li>
+                            <li>FR</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Lesson Plan</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Student List</span>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><i class="icon icon-box-profile"></i>
+                          <span>Attendance</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
