@@ -111,6 +111,10 @@ html {
 }
 
 
+.sub-header ul {
+    margin-left: 8%;
+}
+
 .sub-header ul a {
 	color: #025f9a;
 	font-weight: 500;
@@ -214,6 +218,7 @@ html {
 	width: 100%;
 	float: left;
 	position: relative;
+	margin-left: 8%;
 }
 
 .dashboard-menu ul li img {

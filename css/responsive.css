@@ -8,7 +8,7 @@
 
 	.dashboard-menu,
 	.sub-header ul {
-		margin-left: 7%;
+		margin-left: 12%;
 	}
 
 	.top-box, 
@@ -132,6 +132,10 @@
 	}
 	.placeholder-sidebar {
 		order: 2;
+	}
+
+	.top-boxes {
+		margin-top: 50px;
 	}
 
 }
