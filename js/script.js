@@ -2,7 +2,7 @@
   // Material datepicker
   const datepicker = function() {
     // Standard Bar Chart
-    $('#datepicker-inline').datetimepicker({
+    jQuery('#datepicker-inline').datetimepicker({
       inline: true
     });
   };
