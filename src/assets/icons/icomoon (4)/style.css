@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?fytfox');
+  src:  url('fonts/icomoon.eot?fytfox#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?fytfox') format('woff2'),
+    url('fonts/icomoon.ttf?fytfox') format('truetype'),
+    url('fonts/icomoon.woff?fytfox') format('woff'),
+    url('fonts/icomoon.svg?fytfox#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-students:before {
+  content: "\e91f";
+  color: #fff;
+}
+.icon-arrow:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-arrow-gray:before {
+  content: "\e901";
+  color: #818181;
+}
+.icon-attendence:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-box-confirm:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-box-layers:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-box-plan:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-box-profile:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-box-student:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-btn-arrow:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-classroom:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-confirm:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-delete:before {
+  content: "\e90b";
+  color: #c0392b;
+}
+.icon-dots:before {
+  content: "\e90c";
+  color: #a6a6a6;
+}
+.icon-edit:before {
+  content: "\e90d";
+  color: #22a15a;
+}
+.icon-home:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-layers:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-location:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-mail:before {
+  content: "\e911";
+  color: #dfdfdf;
+}
+.icon-manage:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-m-notification:before {
+  content: "\e913";
+  color: #9b9b9b;
+}
+.icon-m-off:before {
+  content: "\e914";
+  color: #9b9b9b;
+}
+.icon-m-password:before {
+  content: "\e915";
+  color: #9b9b9b;
+}
+.icon-m-profile:before {
+  content: "\e916";
+  color: #9b9b9b;
+}
+.icon-m-settings:before {
+  content: "\e917";
+  color: #9b9b9b;
+}
+.icon-pass:before {
+  content: "\e918";
+  color: #dfdfdf;
+}
+.icon-plan:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-profile:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-reports:before {
+  content: "\e91b";
+  color: #fff;
+}
+.icon-search:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-settings:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon-student:before {
+  content: "\e91e";
+  color: #fff;
+}
