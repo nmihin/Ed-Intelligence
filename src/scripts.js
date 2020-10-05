@@ -1,5 +1,4 @@
 (function() {
-  setTimeout(function(){
   // Calendar Date Time Picker
   $('#datepicker-inline').datetimepicker({
     inline: true
@@ -76,11 +75,10 @@
     }
   };
 
-    let ctx = document.getElementById("barChart");
-    let myBarChart = new Chart(ctx, {
+  let ctx = document.getElementById("barChart");
+  let myBarChart = new Chart(ctx, {
       type: 'bar',
       data: data,
       options: options
-    });
-  }, 1);
+  });
 })();

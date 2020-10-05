@@ -1141,6 +1141,10 @@ li:hover .megamenu,
   padding: 15px;
  }
 
+ .bootstrap-datetimepicker-widget table td span {
+  width: 36px;
+  height: 36px;
+ }
 
  #datepicker-inline {
    display: block;
