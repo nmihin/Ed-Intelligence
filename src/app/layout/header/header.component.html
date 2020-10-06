@@ -16,41 +16,46 @@
               <div class="dashboard-menu">
                 <ul>
                   <li>
+                    <a [routerLinkActive]="['active']" [routerLink]="'/lesson-plan'">
+                      <i class="icon icon-plan"></i>Lesson Plan
+                    </a>
+                  </li>
+                  <li>
                     <a [routerLinkActive]="['active']" [routerLink]="'/admin'">
-                      <span class="icon icon-profile"></span>Admin
+                      <i class="icon icon-profile"></i>Admin
                     </a>
                   </li>
                   <li>
                     <a [routerLinkActive]="['active']" [routerLink]="'/home'">
-                      <span class="icon icon-home"></span>Home
+                      <i class="icon icon-home"></i>Home
                     </a>
                   </li>
                   <li>
                     <ul class="megamenu d-flex flex-nowrap">
                       <li><strong>General</strong>
                         <ul>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> School Settings</a></li>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> User Accounts</a></li>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> Manage Menu</a></li>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> Code Book</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> School Settings</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> User Accounts</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> Manage Menu</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> Code Book</a></li>
                         </ul>
                       </li>
                       <li><strong>Reports</strong>
                         <ul>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> PMF Measures</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> PMF Measures</a></li>
                         </ul>
                       </li>
                       <li><strong>Classes</strong>
                         <ul>
-                          <li><a [routerLinkActive]="['active']" [routerLink]="'/home'"><span class="icon icon-arrow-gray"></span> Home Room</a></li>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> School Year</a></li>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> Subject Manager</a></li>
+                          <li><a [routerLinkActive]="['active']" [routerLink]="'/home'"><i class="icon icon-arrow-gray"></i> Home Room</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> School Year</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> Subject Manager</a></li>
                         </ul>
                       </li>
                       <li><strong>Notification</strong>
                         <ul>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> Manage Template</a></li>
-                          <li><a href="#"><span class="icon icon-arrow-gray"></span> Notification Email List</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> Manage Template</a></li>
+                          <li><a href="#"><i class="icon icon-arrow-gray"></i> Notification Email List</a></li>
                         </ul>
                       </li>
                       <li><strong>Project Commit</strong>
@@ -61,12 +66,12 @@
                       <span class="icon icon-m-settings"></span>Settings
                     </a>
                   </li>
-                  <li><a href="#"><span class="icon icon-reports"></span>School Reports</a></li>
-                  <li><a href="#"><span class="icon icon-manage"></span>Manage</a></li>
+                  <li><a href="#"><i class="icon icon-reports"></i>School Reports</a></li>
+                  <li><a href="#"><i class="icon icon-manage"></i>Manage</a></li>
                 </ul>
               </div>
               <div class="search-box">
-                <span class="icon icon-search"></span>
+                <i class="icon icon-search"></i>
                 <input type="text" placeholder="Search and enter...">
               </div>
             </div>

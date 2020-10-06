@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { LessonPlanComponent } from './pages/lesson-plan/lesson-plan.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AdminComponent } from './admin/admin.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    LessonPlanComponent
   ],
   imports: [
     BrowserModule,
