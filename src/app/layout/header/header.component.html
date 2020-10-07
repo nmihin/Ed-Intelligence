@@ -17,7 +17,7 @@
                 <ul>
                   <li>
                     <a [routerLinkActive]="['active']" [routerLink]="'/lesson-plan'">
-                      <i class="icon icon-plan"></i>Lesson Plan
+                      <i class="icon icon-lesson"></i>Lesson Plan
                     </a>
                   </li>
                   <li>
@@ -82,17 +82,43 @@
         <!-- User Profile -->
         <div class="user-profile">
           <div class="profile-tag">
-            <img src="assets/img/users/avatar-1.jpg" alt="User"><span>Su.admin</span>
-            <img src="assets/icons/arrow.svg" alt="Arrow">
+            <img src="assets/img/users/avatar-1.jpg" alt="User">
+            <span>Su.admin</span>
+            <i class="icon icon-arrow"></i>
           </div>
 
           <div class="user-menu">
             <ul>
-              <li><a href="#"><img src="assets/icons/m-profile.svg" alt="Profile">My Profile</a></li>
-              <li><a href="#"><img src="assets/icons/m-settings.svg" alt="Profile">User Settings</a></li>
-              <li><a href="#"><img src="assets/icons/m-password.svg" alt="Profile">Change Password</a></li>
-              <li><a href="#"><img src="assets/icons/m-notification.svg" alt="Profile">Notifications</a></li>
-              <li><a href="#"><img src="assets/icons/m-off.svg" alt="Profile">Logout</a></li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-profile"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-settings"></i>
+                  <span>User Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-m-password"></i>
+                  <span>Change Password</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-m-notification"></i>
+                  <span>Notifications</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-logout"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
