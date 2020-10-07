@@ -184,6 +184,11 @@ html {
 	margin-left: 20px;
 }
 
+.user-profile .profile-tag .icon {
+  padding: 5px;
+  font-size: 14px;
+}
+
 .user-menu {
 	position: absolute;
 	right: 0;
@@ -1000,7 +1005,11 @@ li:hover .megamenu,
 	{
 		width: 48.5%!important;
 		padding: 11% 0 7% 6%;
-	}
+  }
+
+  ul.side-menu__results {
+    padding: 15px 15px 15px 15px !important;
+  }
 
 }
 
