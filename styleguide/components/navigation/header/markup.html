@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <button mat-button [routerLinkActive]="['active']" [routerLink]="'/home'">
+      Home
+    </button>
+    <button mat-button [routerLinkActive]="['active']" [routerLink]="'/areas'">
+      Areas
+    </button>
+    <button mat-button [routerLinkActive]="['active']" [routerLink]="'/display'">
+      Display
+    </button>
+    <button mat-button [routerLinkActive]="['active']" [routerLink]="'/semaphores'">
+      Semaphores
+    </button>
+    <button mat-button [routerLinkActive]="['active']" [routerLink]="'/sensors'">
+      Sensors
+    </button>
+    <span [routerLink]="'/changelog'">GZA Rheinfelden - Prototype V.1.1.</span>
+    <button class="logout" mat-button (click)="logout()">
+      Logout
+    </button>
+  </mat-toolbar>
