@@ -1,405 +1,336 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="ndpl-c-background">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ed-Intelligence</title>
+        <title v-text="project_name ? project_name + ' | Pattern Library' : 'Pattern Library'"></title>
 
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+        <!-- Astrum (https://github.com/NoDivide/astrum) -->
+        <meta name="application-name" content="Astrum {{ version }}" />
 
-    <script src="js/Chart.min.js"></script>
-    <script src="js/Chart.roundedBarCharts.min.js"></script>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" :href="project_favicon" />
 
-  </head>
+        <!-- Pattern Library Stylesheets: DO NOT CHANGE -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://i.icomoon.io/public/b9475f491e/cmon/style.css">
 
-  <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ['Open Sans']
+                }
+            });
+        </script>
+        <style>
+            /* Targeted theme styles */
+            .ndpl-folding-cube .ndpl-cube:before { background-color: {{ theme.brand_color }} !important; }
+            .ndpl-component__sample--inverted    { background-color: {{ theme.sample_dark_background }} !important }
+            .ndpl-c-background                   { background-color: {{ theme.background_color }} !important; }
+            .ndpl-c-border                       { border-color: {{ theme.border_color }} !important; }
+            .ndpl-c-border-b                     { border-bottom-color: {{ theme.border_color }} !important; }
+            .ndpl-c-highlight                    { background-color: {{ theme.highlight_color }} !important; }
+            .ndpl-c-highlight-ca a.active,
+            .ndpl-c-highlight-ca a:hover         { background-color: {{ theme.highlight_color }} !important; }
+            .ndpl-c-brand-c                      { color: {{ theme.brand_color }} !important; }
+            .ndpl-c-brand-bg                     { background-color: {{ theme.brand_color }} !important; }
+            .ndpl-c-brand-b                      { border-color: {{ theme.brand_color }} !important; }
+            .ndpl-c-brand-bl-ca a.active,
+            .ndpl-c-brand-bl-ca a:hover          { border-left-color: {{ theme.brand_color }} !important; }
+            .ndpl-c-brand-a:hover                { color: {{ theme.brand_color }} !important; }
+            .ndpl-c-brand-ca a:hover             { color: {{ theme.brand_color }} !important; }
+            .ndpl-c-brand-cai a                  { color: {{ theme.brand_color }} !important; }
+        </style>
+        <link rel="stylesheet" v-if="theme.code_highlight_theme" :href="'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/' + theme.code_highlight_theme + '.min.css'">
+        <style v-if="theme.override_code_highlight_bg">.hljs { background: {{ theme.highlight_color }}} !important; }</style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.css">
+        <link rel="stylesheet" href="app/css/styles.min.css">
+        <link rel="stylesheet" href="styles/vendor.min.css">
+        <link rel="stylesheet" href="styles/app.min.css">
 
-    <div class="theme-layout">
+        <!-- Font Libraries -->
+        <link rel="stylesheet" v-if="font_libraries.google_web_fonts" :href="font_libraries.google_web_fonts">
+        <link rel="stylesheet" v-if="font_libraries.typography_web_fonts" :href="font_libraries.typography_web_fonts">
+        <ndpl-script :script="'https://use.typekit.net/' + font_libraries.typekit_code + '.js'" v-if="font_libraries.typekit_code" inline-template>
+            <script :src="script" @load="loadTypekit"></script>
+        </ndpl-script>
 
-      <!-- Main Header -->
-      <div class="header">
+        <!-- Custom stylesheets are loaded from the assets.css array in data.json -->
+        <link rel="stylesheet" v-for="css in assets.css" :href="css">
+    </head>
+    <body id="top"
+          class="ndpl-body ndpl-c-background"
+          :class="{ 'ndpl-inverted': theme.invert_text, 'ndpl-desktop': !mobile_view, 'ndpl-mobile': mobile_view, 'ndpl-disable-scrolling': sidebar_scrolling }">
 
-        <!-- Logo -->
-        <div class="logo">
-          <a href="#">
-            <div class="logo-shape"></div>
-            <img src="assets/img/logo.png" alt="Logo">
-          </a>
-        </div>
-        <!-- logo-END -->
-
-        <!-- Main Menu -->
-        <div class="main-menu">
-          <div class="container">
-            <div class="row">
-              <div class="dashboard-menu">
-                <ul>
-                  <li><a href="#"><img src="assets/icons/home.svg">Home</a></li>
-                  <li>
-                    <ul class="megamenu d-flex flex-nowrap">
-                      <li><strong>General</strong>
-                        <ul>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> School Settings</a></li>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> User Accounts</a></li>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> Manage Menu</a></li>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> Code Book</a></li>
-                        </ul>
-                      </li>
-                      <li><strong>Reports</strong>
-                        <ul>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> PMF Measures</a></li>
-                        </ul>
-                      </li>
-                      <li><strong>Classes</strong>
-                        <ul>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> Home Room</a></li>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> School Year</a></li>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> Subject Manager</a></li>
-                        </ul>
-                      </li>
-                      <li><strong>Notification</strong>
-                        <ul>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> Manage Template</a></li>
-                          <li><a href="#"><img src="./assets/img/left-arrow.png" alt=""> Notification Email List</a></li>
-                        </ul>
-                      </li>
-                      <li><strong>Project Commit</strong>
-
-                      </li>
-                    </ul>
-                    <a class="mega-item" href="#"><img src="assets/icons/settings.svg">Settings</a>
-                  </li>
-                  <li><a href="#"><img src="assets/icons/reports.svg">School Reports</a></li>
-                  <li><a href="#"><img src="assets/icons/manage.svg">Manage</a></li>
-                </ul>
-              </div>
-              <ul id="search-menu">
-                  <li><h2>Math</h2>
-                    <ul>
-                      <li><h3>Kindergarten</h3>
-                        <ul class="esquerda">
-                          <li><a href="#">Counting & Cardinality</a></li>
-                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                          <li><a href="#">Measurement & Data</a></li>
-                          <li><a href="#">Geometry</a></li>
-                        </ul>
-                      </li>
-                      <li><h3>First Grade</h3>
-                        <ul class="esquerda">
-                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                          <li><a href="#">Measurement & Data</a></li>
-                          <li><a href="#">Geometry</a></li>
-                        </ul>
-                      </li>
-                      <li><h3>Fourth Grade</h3>
-                        <ul class="esquerda">
-                          <li><a href="#">Counting & Cardinality</a></li>
-                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                          <li><a href="#">Measurement & Data</a></li>
-                          <li><a href="#">Geometry</a></li>
-                        </ul>
-                      </li>
-                      <li><h3>Fifth Grade</h3>
-                        <ul class="esquerda">
-                          <li><a href="#">Counting & Cardinality</a></li>
-                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                          <li><a href="#">Measurement & Data</a></li>
-                          <li><a href="#">Geometry</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- main-menu-END -->
-
-        <!-- User Profile -->
-        <div class="user-profile">
-          <div class="profile-tag">
-            <img src="assets/img/user-profile.png" alt="User"><span>Su.admin</span>
-            <img src="assets/icons/arrow.svg" alt="Arrow">
-          </div>
-
-          <div class="user-menu">
-            <ul>
-              <li><a href="#"><img src="assets/icons/m-profile.svg" alt="Profile">My Profile</a></li>
-              <li><a href="#"><img src="assets/icons/m-settings.svg" alt="Profile">User Settings</a></li>
-              <li><a href="#"><img src="assets/icons/m-password.svg" alt="Profile">Change Password</a></li>
-              <li><a href="#"><img src="assets/icons/m-notification.svg" alt="Profile">Notifications</a></li>
-              <li><a href="#"><img src="assets/icons/m-off.svg" alt="Profile">Logout</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- user-profile-END -->
-
-      </div>
-      <!-- main-header-END -->
-
-      <div class="sub-header">
-        <div class="container">
-          <div class="row">
-            <ul>
-              <li><a href="#">Dashboard</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="main-content">
-
-        <div class="top-boxes">
-          <div class="container-fluid">
-            <div class="row d-flex justify-content-around flex-nowrap">
-              <!-- Box -->
-              <div class="top-box flex-fill">
-                <div class="box-symbol">
-                  <div class="box-icon-bg icon-bg-0"></div>
-                  <img class="icon-fix-1" src="assets/icons/box-student.svg" alt="Student">
-                </div>
-                <div class="box-content">
-                  <h3><a href="#">Student</a></h3>
-                  <ul>
-                    <li>258 <strong>Total Students</strong></li>
-                    <li>117 <strong>Male</strong></li>
-                    <li>141 <strong>Female</strong></li>
-                  </ul>
-                </div>
-                <a href="#">Details</a>
-              </div>
-              <!-- Box -->
-              <div class="top-box flex-fill">
-                <div class="box-symbol">
-                  <div class="box-icon-bg icon-bg-1"></div>
-                  <img src="assets/icons/box-profile.svg" alt="Profile">
-                </div>
-                <div class="box-content">
-                  <h3><a href="#">Employee</a></h3>
-                  <ul>
-                    <li>258 <strong>Total Students</strong></li>
-                    <li>117 <strong>Male</strong></li>
-                    <li>141 <strong>Female</strong></li>
-                  </ul>
-                </div>
-                <a href="#">Details</a>
-              </div>
-              <!-- Box -->
-              <div class="top-box flex-fill">
-                <div class="box-symbol">
-                  <div class="box-icon-bg icon-bg-2"></div>
-                  <img src="assets/icons/box-plan.svg" alt="Plan">
-                </div>
-                <div class="box-content">
-                  <h3><a href="#">Lesson Plan</a></h3>
-                  <ul>
-                    <li>258 <strong>Total Students</strong></li>
-                    <li>117 <strong>Male</strong></li>
-                    <li>141 <strong>Female</strong></li>
-                  </ul>
-                </div>
-                <a href="#">Details</a>
-              </div>
-              <!-- Box -->
-              <div class="top-box flex-fill">
-                <div class="box-symbol">
-                  <div class="box-icon-bg icon-bg-3"></div>
-                  <img src="assets/icons/box-confirm.svg" alt="Confirm">
-                </div>
-                <div class="box-content">
-                  <h3><a href="#">Student Attendance</a></h3>
-                  <ul>
-                    <li>258 <strong>Total Students</strong></li>
-                    <li>117 <strong>Male</strong></li>
-                    <li>141 <strong>Female</strong></li>
-                  </ul>
-                </div>
-                <a href="#">Details</a>
-              </div>
-              <!-- Box -->
-              <div class="top-box flex-fill">
-                <div class="box-symbol">
-                  <div class="box-icon-bg icon-bg-4"></div>
-                  <img src="assets/icons/box-layers.svg" alt="Layers">
-                </div>
-                <div class="box-content">
-                  <h3><a href="#">Subject Teacher</a></h3>
-                  <ul>
-                    <li>258 <strong>Total Students</strong></li>
-                    <li>117 <strong>Male</strong></li>
-                    <li>141 <strong>Female</strong></li>
-                  </ul>
-                </div>
-                <a href="#">Details</a>
-              </div>
-
-            </div>
-          </div>
+    <div class="ndpl-loading" :class="{ 'in-progress': ! loaded || resizing }">
+        <div class="ndpl-folding-cube" v-if="!log.error.length && !log.info.length">
+            <div class="ndpl-cube1 ndpl-cube"></div>
+            <div class="ndpl-cube2 ndpl-cube"></div>
+            <div class="ndpl-cube4 ndpl-cube"></div>
+            <div class="ndpl-cube3 ndpl-cube"></div>
         </div>
 
+        <h3 class="ndpl-loading__title" v-if="! loaded && !log.error.length && !log.info.length">Building pattern library...</h3>
+        <h3 class="ndpl-loading__title" v-if="resizing && !log.error.length && !log.info.length">Realigning pattern library...</h3>
+        <h3 class="ndpl-loading__title" v-if="log.error.length">Hold up! We have some errors...</h3>
+        <h3 class="ndpl-loading__title" v-if="log.info.length && !log.error.length">Looks like you have some setup to do...</h3>
 
-        <div class="card-boxes">
-          <div class="container-fluid">
-            <div class="row d-flex justify-content-around flex-nowrap">
-              <!-- Box -->
-              <div class="card-box flex-fill">
-                <div class="card-title d-flex justify-content-between align-items-center">
-                  <h2>Upcoming Lesson Plans</h2>
-                  <a href="#" class="select"><img class="card-icon" src="assets/icons/dots.svg" alt="select"></a>
-                </div>
-                <div class="card-content d-flex">
-                  <ul>
-                    <li class="row d-flex justify-content-around">
-                      <div class="card-element col-3 col-lg-3">
-                        <img class="card-avatar" src="assets/img/users/avatar-1.jpg" alt="user" />
-                      </div>
-                      <div class="card-element col-6 col-lg-5">
-                        <h3>English</h3>
-                        <p>
-                          <a href="#" class="location"><img class="card-icon" src="assets/icons/location.svg" alt="location"></a>
-                          <small>CC.012 Class</small>
-                        </p>
-                      </div>
-                      <div class="card-element col-3 col-lg-4">
-                        <a href="#" class="edit">
-                          <img class="card-icon" src="assets/icons/edit.svg" alt="edit">
-                        </a>
-                        <a href="#" class="delete">
-                          <img class="card-icon" src="assets/icons/delete.svg" alt="delete">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="row d-flex justify-content-around">
-                      <div class="card-element col-3 col-lg-3">
-                        <img class="card-avatar" src="assets/img/users/avatar-2.jpg" alt="user" />
-                      </div>
-                      <div class="card-element col-6 col-lg-5">
-                        <h3>English</h3>
-                        <p>
-                          <a href="#" class="location"><img class="card-icon" src="assets/icons/location.svg" alt="location"></a>
-                          <small>CC.012 Class</small>
-                        </p>
-                      </div>
-                      <div class="card-element col-3 col-lg-4">
-                        <a href="#" class="edit">
-                          <img class="card-icon" src="assets/icons/edit.svg" alt="edit">
-                        </a>
-                        <a href="#" class="delete">
-                          <img class="card-icon" src="assets/icons/delete.svg" alt="delete">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="row d-flex justify-content-around">
-                      <div class="card-element col-3 col-lg-3">
-                        <img class="card-avatar" src="assets/img/users/avatar-3.jpg" alt="user" />
-                      </div>
-                      <div class="card-element col-6 col-lg-5">
-                        <h3>English</h3>
-                        <p>
-                          <a href="#" class="location"><img class="card-icon" src="assets/icons/location.svg" alt="location"></a>
-                          <small>CC.012 Class</small>
-                        </p>
-                      </div>
-                      <div class="card-element col-3 col-lg-4">
-                        <a href="#" class="edit">
-                          <img class="card-icon" src="assets/icons/edit.svg" alt="edit">
-                        </a>
-                        <a href="#" class="delete">
-                          <img class="card-icon" src="assets/icons/delete.svg" alt="delete">
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-all">
-                  <a href="#">view all +</a>
-                </div>
-              </div>
-              <!-- Box -->
-              <div class="card-box flex-fill">
-                <div class="card-title d-flex justify-content-between align-items-center">
-                  <h2>Visitor Statistics</h2>
-                  <div class="user-profile">
-                    <div class="profile-tag">
-                      <span>Custom range</span>
-                      <img src="assets/icons/arrow-gray.svg" alt="arrow">
-                    </div>
-                    <div class="user-menu">
-                      <ul>
-                        <li>
-                          <a href="#">Last 7 days</a></li>
-                        </li>
-                        <li>
-                          <a href="#">Last 28 days</a></li>
-                        </li>
-                        <li>
-                          <a href="#">Last 90 days</a></li>
-                          </li>
-                        <li>
-                          <a href="#">Last 365 days</a></li>
-                        </li>
-                        <li>
-                          <a href="#">This year</a></li>
-                        </li>
-                      </ul>
-                      <ul>
-                        <li>
-                          <a href="#">2020.</a></li>
-                        </li>
-                        <li>
-                          <a href="#">2019.</a></li>
-                         </li>
-                      </ul>
-                      <ul>
-                        <li>
-                          <a href="#">September</a></li>
-                        </li>
-                        <li>
-                          <a href="#">August</a></li>
-                        </li>
-                        <li>
-                          <a href="#">July</a></li>
-                        </li>
-                      </ul>
-                      <ul>
-                        <li>
-                          <a href="#">Custom range</a></li>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-content d-flex">
-                  <canvas
-                    id="barChart"
-                  ></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- main-content-END -->
-
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="copyright">
-          <p>2020 © Ed-Intelligence All Rights Reserved.</p>
-        </div>
-      </div>
-      <!-- footer-END -->
+        <ul class="ndpl-error" v-if="log.error.length">
+            <li class="ndpl-error__item" v-for="error in log.error">{{{ error }}}</li>
+        </ul>
+        <ul class="ndpl-info" v-if="log.info.length && !log.error.length">
+            <li class="ndpl-info__item" v-for="info in log.info">{{{ info }}}</li>
+        </ul>
     </div>
 
-    <script src="js/script.js"></script>
-  </body>
+    <div class="ndpl-container"
+         :class="{ 'loaded': loaded && ! resizing, 'resizing': resizing }">
 
+        <header class="ndpl-header">
+
+            <img class="ndpl-header__logo"
+                 :src="project_logo"
+                 :alt="project_name"
+                 v-if="project_logo"/>
+
+            <h1 class="ndpl-header__title ndpl-c-brand-ca">
+                <span v-if="theme.show_project_name">{{{ project }}}</span>
+                <small>Pattern Library</small>
+            </h1>
+
+            <div class="ndpl-nav-handle"
+                 :class="{ 'open': open_nav }"
+                 @click="toggleNav">
+                <div class="ndpl-nav-handle__container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="ndpl-sidebar"
+             :class="{ 'open': open_nav }">
+
+            <header class="ndpl-sidebar__header">
+
+                <img class="ndpl-sidebar__logo" 
+                     style="width:100%;"
+                     :src="project_logo"
+                     :alt="project_name"
+                     v-if="project_logo"/>
+
+                <h1 class="ndpl-sidebar__title ndpl-c-brand-ca">
+                    <span v-if="theme.show_project_name">{{{ project }}}</span>
+                    <small v-if="theme.titles.library_title"
+                           v-text="theme.titles.library_title"></small>
+                </h1>
+
+            </header>
+
+            <nav class="ndpl-nav">
+                <template v-if="content">
+                    <h2 class="ndpl-nav__title"
+                        v-if="theme.titles.pages_title"
+                        v-text="theme.titles.pages_title"></h2>
+
+                    <ul class="ndpl-nav__items ndpl-c-border ndpl-c-highlight-ca ndpl-c-brand-bl-ca">
+                        <li class="ndpl-nav__item" v-for="page in content.pages">
+                            <a class="ndpl-nav__page ndpl-nsc ndpl-c-border-b"
+                               :class="{ 'active': active_page && active_page.title === page.title }"
+                               v-text="page.title"
+                               @click.prevent="loadPage(page)">
+                            </a>
+                        </li>
+                    </ul>
+                </template>
+
+                <h2 class="ndpl-nav__title">
+                    <a class="ndpl-nsc"
+                       href="#top"
+                       @click.prevent="scrollToHref"
+                       v-if="theme.titles.components_title"
+                       v-text="theme.titles.components_title"></a>
+                </h2>
+
+                <ul class="ndpl-nav__items ndpl-c-border">
+                    <li class="ndpl-nav__item"
+                        v-for="group in groups"
+                        :class="{ 'active': active_components.length > 0 && group.id == active_components[0].group_id || group.id == open_group }">
+
+                        <a :href="'#' + group.id"
+                           class="ndpl-nav__group ndpl-nsc ndpl-c-border-b"
+                           v-text="group.title"
+                           @click.prevent="toggleOpenGroups(group)">
+                        </a>
+
+                        <ul class="ndpl-nav__child-items ndpl-c-highlight"
+                            v-if="group.components.length">
+
+                            <li class="ndpl-nav__child-item ndpl-c-border-b ndpl-c-brand-bl-ca"
+                                v-for="component in group.components">
+                                <a :href="'#' + component.id"
+                                   class="ndpl-nav__component ndpl-nsc"
+                                   :class="{ 'active': active_components.indexOf(component) >= 0 }"
+                                   v-text="component.title"
+                                   @click.prevent="scrollToHref">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <div class="ndpl-copyright ndpl-c-brand-ca">
+
+                <p v-if="copyright_start_year && client || all_creators">
+                    <template v-if="copyright_start_year && client">
+                        &copy; {{ copyright_year }} {{{ client }}}.
+                    </template>
+                    <template v-if="all_creators">
+                        <br/>Pattern library created by {{{ all_creators }}}.
+                    </template>
+                </p>
+
+                <p v-if="theme.show_version">Astrum v{{ version }}</p>
+
+            </div>
+        </div>
+
+        <div class="ndpl-content" data-app="astrum">
+            <div class="ndpl-page ndpl-c-brand-cai" :style="library_inline_styles" v-if="active_page">{{{ active_page.markup }}}</div>
+            <div class="ndpl-library" :style="library_inline_styles" :class="{ 'ndpl-preloaded': active_page }">
+
+                <ndpl-group v-for="group in groups"
+                            :group="group"
+                            inline-template>
+
+                    <div class="ndpl-library__group"
+                         :id="group.id">
+
+                        <h2 class="ndpl-library__title">{{ group.title }}</h2>
+
+                        <div class="ndpl-group__description ndpl-c-brand-ca"
+                             v-html="group.description"
+                             v-if="group.description"></div>
+
+                        <div class="ndpl-components">
+                            <ndpl-component v-for="component in group.components"
+                                            :component="component"
+                                            inline-template>
+
+                                <div class="ndpl-component"
+                                     :id="component.id"
+                                     :group-id="component.group_id"
+                                     :class="'ndpl-component--' + component.width">
+
+                                    <h3 class="ndpl-component__title">{{ component.title }}</h3>
+
+                                    <div class="ndpl-component__description ndpl-c-brand-ca"
+                                         v-html="component.description"></div>
+
+                                    <template v-if="component.type == 'colors'">
+                                        <div v-if="component.colors.length" class="ndpl-component__colors ndpl-cf">
+
+                                            <div class="ndpl-component__color-container"
+                                                 v-for="color in component.colors">
+
+                                                <div class="ndpl-component__color"
+                                                     v-for="item in color.split(',')"
+                                                     :class="{ 'ndpl-apply-border ndpl-c-border': shouldApplyBorder(item), }"
+                                                     :style="'background-color:' + item">
+                                                    <div :class="{ 'ndpl-dark-text': shouldInvertText(item) }">{{ item }}</div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <ul v-else class="ndpl-component__sample-missing ndpl-info">
+                                            <li class="ndpl-info__item">Locate this component in your <code>data.json</code> file and add your colors to the "colors" array that has been created for you e.g.:</li>
+                                            <li><pre class="ndpl-pre">"colors": ["#4c4c4c","#7d8284","#a6b1b5","#e6eaf2","#FFFFFF"]</pre></li>
+                                        </ul>
+                                    </template>
+                                    <template v-else>
+                                        <div class="ndpl-component__container"
+                                             v-show="isCodeVisible()">
+
+                                            <div class="ndpl-component__sample ndpl-c-border"
+                                                 :class="{
+                                                    'ndpl-component__sample--inverted': component.options.sample_dark_background,
+                                                    'ndpl-component__sample--disabled-code': component.options.disable_code_sample
+                                                 }"
+                                                 :style="inline_styles"
+                                                 v-if="component.html">
+                                                {{{ component.html }}}
+                                            </div>
+
+                                            <template v-if="component.html">
+                                                <div class="ndpl-component__code ndpl-c-border"
+                                                     v-show="component.code_show">
+                                                    <pre class="ndpl-pre"><code class="ndpl-code html" v-text="component.html"></code></pre>
+                                                </div>
+                                                <a v-if="!component.options.disable_code_sample"
+                                                   class="ndpl-component__code-toggle ndpl-c-highlight ndpl-c-border"
+                                                   @click.prevent="component.code_show = ! component.code_show"
+                                                   v-text="component.code_show ? 'Hide code sample' : 'Show code sample'"></a>
+                                            </template>
+                                            <ul v-else class="ndpl-component__sample-missing ndpl-info">
+                                                <li class="ndpl-info__item">Add your component markup to <code>/components/{{ component.group }}/{{ component.name }}/markup.html</code></li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="ndpl-component__sample-hidden ndpl-info"
+                                             v-show="!isCodeVisible()">
+                                            This component is hidden at this resolution.
+                                        </div>
+                                    </template>
+                                </div>
+                            </ndpl-component>
+                        </div>
+                    </div>
+                </ndpl-group>
+            </div>
+        </div>
+    </div>
+
+    <ndpl-script v-for="script in assets.js"
+                 :script="script"
+                 v-if="loaded"
+                 inline-template>
+        <script :src="script"></script>
+    </ndpl-script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.8.0/vue-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
+    <script src="app/js/main.min.js"></script>
+    <script src="../scripts/thirdParty/swiper.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+            setTimeout(function(){
+                    var swiper = new Swiper('.swiper-container', {
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                      // autoplay: {
+                      //  delay: 5000,
+                      // },
+                      pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                          return '<span class="' + className + '"></span>';
+                        },
+                      },
+                    });
+            }, 3000);
+    </script>
+    </body>
 </html>
