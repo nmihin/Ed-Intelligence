@@ -1645,6 +1645,7 @@ li:hover .megamenu,
   display: inline-block;
   padding-left: 10px;
   line-height:1.5;
+  font-size: 18px;
 }
 
 .side-menu-content {
