@@ -1454,7 +1454,7 @@ html {
 }
 
 .dashboard-menu > ul > li > a {
-  color: var(--white) ;
+  color: var(--white) !important;
   font-weight: bold;
   text-decoration: none;
 }
@@ -1822,7 +1822,7 @@ ul.side-menu__results > li > ul > li a:hover {
 .search-box {
   text-align: left;
   position: relative;
-  margin:10px 0;
+  top:10px;
 }
 
 .search-box .icon {
@@ -1835,9 +1835,9 @@ ul.side-menu__results > li > ul > li a:hover {
 	background-color: var(--auxiliary);
 	color: var(--white) ;
 	border-radius: 5px;
-	border: 0 none;
-	min-width: 56%;
-  padding: 10px 20px 10px 32px;
+  border: 0 none;
+  height: 40px;
+  padding: 0 20px 0 32px;
 }
 
 .search-box input:focus {
@@ -2086,7 +2086,8 @@ ul.side-menu__results > li > ul > li a:hover {
 	}
 
 	.header {
-		margin-bottom: 50px;
+    margin-bottom: 50px;
+    position: relative;
 	}
 
 	.top-box {
