@@ -6,7 +6,7 @@
   5. Cards
   6. Layout
   7. Header
-  8. Menu
+  8. Main Menu
   9. Mega menu
   10. Mobile menu
   11. Side menu
@@ -61,7 +61,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 a,
 a:hover,
 a:active {
@@ -79,20 +78,20 @@ a:active {
   --secondary: #025589;
   --tertiary: #0799F5;
   --auxiliary: #2980b9;
-
-  --black: #000;
-  --white: #fff ;
-  --gray: #ccc;
   --bluegray: #f1f9ff;
+
+  --white: #fff ;
+  --background:#f8f9fa;
+  --gray: #ccc;
   --lightgray: #E2E6EB;
+  --oslogray: #7f8c8d;
   --mediumgray: #777;
   --dark: #333;
-  --background:#f8f9fa;
+  --black: #000;
 
   --red: #C0392B;
   --green: #16A085;
   --bluewood: #34495e;
-  --oslogray: #7f8c8d;
 }
 
 /*
@@ -106,6 +105,12 @@ a:active {
   src: url("assets/fonts/Sfprotext/sfprotext-bold.ttf") format("truetype");
 }
 
+h1 { font-size: 24px; }
+h2 { font-size: 21px; }
+h3 { font-size: 18px; }
+h4 { font-size: 26px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
 
 /*
 4. Icons
@@ -546,7 +551,7 @@ a:active {
   font-weight: bold;
 	color: var(--black);
 	position: absolute;
-	right: 10px;
+	right: 15px;
 	bottom: 10px;
 	color: var(--tertiary);
 	line-height: 1.3em;
@@ -1558,7 +1563,7 @@ li:hover .megamenu,
 10. Mobile menu
 */
 /* MOBILE MENU */
-.side-menu-mobile {
+.menu-mobile {
   background: var(--primary); /* Old browsers */
   background: -moz-linear-gradient(top,  var(--primary) 0%, var(--tertiary) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  var(--primary) 0%,var(--tertiary) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -1573,31 +1578,31 @@ li:hover .megamenu,
   border-top-left-radius: 25px;
 }
 
-.side-menu-mobile ul {
+.menu-mobile ul {
 	max-height: 105px;
 	padding: 10px 0;
 }
 
-.side-menu-mobile ul li {
+.menu-mobile ul li {
 	border-right: 1px solid var(--auxiliary);
 	width: 100%;
 	padding: 15px 5px;
 	text-align: center;
 }
 
-.side-menu-mobile ul li:last-child {
+.menu-mobile ul li:last-child {
 	border-right: 0 none;
 }
 
-.side-menu-mobile ul li .icon {
+.menu-mobile ul li .icon {
   font-size: 24px;
 }
 
-.side-menu-mobile ul li a {
+.menu-mobile ul li a {
 	text-decoration: none;
 }
 
-.side-menu-mobile ul li span {
+.menu-mobile ul li span {
 	display: block;
 	width: 100%;
 	color: var(--white) ;
@@ -2112,7 +2117,7 @@ ul.side-menu__results > li > ul > li a:hover {
     margin-top:25px;
   }
 
-  .side-menu-mobile {
+  .menu-mobile {
     display: block !important;
   }
 
