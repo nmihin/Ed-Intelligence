@@ -8,6 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LessonPlanComponent } from './pages/lesson-plan/lesson-plan.component';
+import { StyleguideComponent } from './styleguide/styleguide.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LessonPlanComponent } from './pages/lesson-plan/lesson-plan.component';
     FooterComponent,
     HomeComponent,
     AdminComponent,
-    LessonPlanComponent
+    LessonPlanComponent,
+    StyleguideComponent
   ],
   imports: [
     BrowserModule,
