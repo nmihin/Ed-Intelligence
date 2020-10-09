@@ -28,7 +28,6 @@
     },
     "assets": {
         "css": [
-            "../assets/css/dist/site/all.css",
             "../assets/css/dist/astrum/all.css"
         ],
         "js": [
