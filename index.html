@@ -74,8 +74,8 @@
             <div class="ndpl-cube3 ndpl-cube"></div>
         </div>
 
-        <h3 class="ndpl-loading__title" v-if="! loaded && !log.error.length && !log.info.length">Building pattern library...</h3>
-        <h3 class="ndpl-loading__title" v-if="resizing && !log.error.length && !log.info.length">Realigning pattern library...</h3>
+        <h3 class="ndpl-loading__title" v-if="! loaded && !log.error.length && !log.info.length">Building live styleguide library...</h3>
+        <h3 class="ndpl-loading__title" v-if="resizing && !log.error.length && !log.info.length">Realigning live styleguide library...</h3>
         <h3 class="ndpl-loading__title" v-if="log.error.length">Hold up! We have some errors...</h3>
         <h3 class="ndpl-loading__title" v-if="log.info.length && !log.error.length">Looks like you have some setup to do...</h3>
 
@@ -99,7 +99,7 @@
 
             <h1 class="ndpl-header__title ndpl-c-brand-ca">
                 <span v-if="theme.show_project_name">{{{ project }}}</span>
-                <small>Pattern Library</small>
+                <small>Live Styleguide Library</small>
             </h1>
 
             <div class="ndpl-nav-handle"
@@ -193,7 +193,7 @@
                         &copy; {{ copyright_year }} {{{ client }}}.
                     </template>
                     <template v-if="all_creators">
-                        <br/>Pattern library created by {{{ all_creators }}}.
+                        <br/>Live styleguide library created by {{{ all_creators }}}.
                     </template>
                 </p>
 

@@ -21,7 +21,7 @@
         "show_version": true,
         "max_width": 1200,
         "titles": {
-            "library_title": "Pattern Library",
+            "library_title": "Live Styleguide Library",
             "pages_title": "Overview",
             "components_title": "Components"
         }
@@ -210,11 +210,6 @@
                     "group": "navigation",
                     "name": "mainmenu",
                     "title": "Main Menu"
-                },
-                {
-                    "group": "navigation",
-                    "name": "megamenu",
-                    "title": "Mega Menu"
                 },
                 {
                     "group": "navigation",

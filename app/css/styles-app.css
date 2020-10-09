@@ -105,10 +105,20 @@ a:active {
   src: url("assets/fonts/Sfprotext/sfprotext-bold.ttf") format("truetype");
 }
 
+.thin { font-weight: 100; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.semibold { font-weight: 600; }
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+.italic { font-style: italic; }
+
+
 h1 { font-size: 24px; }
 h2 { font-size: 21px; }
 h3 { font-size: 18px; }
-h4 { font-size: 26px; }
+h4 { font-size: 16px; }
 h5 { font-size: 14px; }
 h6 { font-size: 12px; }
 
@@ -1320,14 +1330,16 @@ html {
 }
 
 .user-profile {
-  flex-basis: 200px;
-  flex-shrink: 0; 
-  display: flex;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+    max-width: 200px;
+    float: left;
 }
 
 .user-profile .profile-tag {
   float: right;
-  position: absolute;
   right: 30px;
   cursor: pointer;
   top: 0;
@@ -1441,6 +1453,11 @@ html {
   float: left;
   position: relative;
   margin-left: 8%;
+  background: var(--primary); /* Old browsers */
+  background: -moz-linear-gradient(top,  var(--primary) 0%, var(--tertiary) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  var(--primary) 0%,var(--tertiary) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  var(--primary) 0%,var(--tertiary) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--primary)', endColorstr='var(--tertiary)',GradientType=0 ); /* IE6-9 */
 }
 
 .dashboard-menu ul li img {
@@ -1579,8 +1596,8 @@ li:hover .megamenu,
   background: -webkit-linear-gradient(top,  var(--primary) 0%,var(--tertiary) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  var(--primary) 0%,var(--tertiary) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--primary)', endColorstr='var(--tertiary)',GradientType=0 ); /* IE6-9 */
-  display: none;
-  position: fixed;
+  display: block;
+  position: relative;
   bottom: 0;
   z-index: 9999;
   width: 100%;
