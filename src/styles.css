@@ -378,7 +378,9 @@ h6 { font-size: 12px; }
 	padding: 15px 0;
 	margin-top:0;
 	right: 30px;
-    width: 200px;
+  width: 200px;
+  top: 33px !important;
+  right: 76px !important;
 }
 
 .card-boxes .card-box .user-menu li {
