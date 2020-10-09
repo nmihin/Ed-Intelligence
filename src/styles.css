@@ -1244,11 +1244,14 @@ html {
 }
 
 .logo {
-	position: absolute;
-	left: 0;
-	top: 0;
-	float: left;
-	z-index: 999;
+  position: relative;
+  left: 0;
+  top: 0;
+  float: left;
+  z-index: 999;
+  display: flex;
+  flex-basis: 150px;
+  flex-shrink: 0; 
 }
 
 .logo img {
@@ -1280,9 +1283,10 @@ html {
 /* HEADER */
 .header {
 	width: 100%;
-  display: block;
+  display: flex;
   float: left;
-	height: 60px;
+  height: 60px;
+  position:relative;
   background: var(--primary); /* Old browsers */
   background: -moz-linear-gradient(top,  var(--primary) 0%, var(--tertiary) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  var(--primary) 0%,var(--tertiary) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -1313,6 +1317,12 @@ html {
   font-size: 14px;
   text-decoration: none;
   margin-left:8%;
+}
+
+.user-profile {
+  flex-basis: 200px;
+  flex-shrink: 0; 
+  display: flex;
 }
 
 .user-profile .profile-tag {
@@ -1420,10 +1430,10 @@ html {
 */
 /* MAIN MENU */
 .main-menu {
-	display: block;
-	width: 100%;
+	display: flex;
 	float: left;
-	position: relative;
+  position: relative;
+  flex-grow: 1;
 }
 
 .dashboard-menu {
@@ -1822,6 +1832,7 @@ ul.side-menu__results > li > ul > li a:hover {
 /* SEARCH BOX */
 .search-box {
   text-align: left;
+  float: left;
   position: relative;
   top:10px;
 }
