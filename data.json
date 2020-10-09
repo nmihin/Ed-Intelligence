@@ -75,6 +75,33 @@
                 },
                 {
                     "group": "branding",
+                    "name": "logo-orange",
+                    "title": "Logo Orange",
+                    "width": "half"
+                },
+                {
+                    "group": "branding",
+                    "name": "logo-black",
+                    "title": "Logo Black",
+                    "width": "half"
+                },
+                {
+                    "group": "branding",
+                    "name": "logo-white",
+                    "title": "Logo White",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": true
+                    }
+                },
+                {
+                    "group": "branding",
+                    "name": "logo-text",
+                    "title": "Logo Text",
+                    "width": "half"
+                },
+                {
+                    "group": "branding",
                     "name": "icons-all",
                     "title": "Icons All",
                     "options": {
