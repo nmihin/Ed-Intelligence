@@ -178,11 +178,6 @@
                     "group": "layout",
                     "name": "profile",
                     "title": "Profile"
-                },
-                {
-                    "group": "layout",
-                    "name": "content",
-                    "title": "Content"
                 }
             ]
         },
