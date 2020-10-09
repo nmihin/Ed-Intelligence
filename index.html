@@ -14,7 +14,7 @@
 
         <!-- Pattern Library Stylesheets: DO NOT CHANGE -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://i.icomoon.io/public/b9475f491e/cmon/style.css">
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
         <script>
@@ -45,10 +45,12 @@
         </style>
         <link rel="stylesheet" v-if="theme.code_highlight_theme" :href="'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/' + theme.code_highlight_theme + '.min.css'">
         <style v-if="theme.override_code_highlight_bg">.hljs { background: {{ theme.highlight_color }}} !important; }</style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.css">
         <link rel="stylesheet" href="app/css/styles.min.css">
-        <link rel="stylesheet" href="styles/vendor.min.css">
-        <link rel="stylesheet" href="styles/app.min.css">
+        <link rel="stylesheet" href="app/css/bootstrap.min.css">
+        <link rel="stylesheet" href="app/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="app/css/pmd-datetimepicker.min.css">
+        <link rel="stylesheet" href="app/css/swiper.css">
+        <link rel="stylesheet" href="app/css/styles-app.css">
 
         <!-- Font Libraries -->
         <link rel="stylesheet" v-if="font_libraries.google_web_fonts" :href="font_libraries.google_web_fonts">
@@ -310,27 +312,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
     <script src="app/js/main.min.js"></script>
-    <script src="../scripts/thirdParty/swiper.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-            setTimeout(function(){
-                    var swiper = new Swiper('.swiper-container', {
-                      navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                      },
-                      // autoplay: {
-                      //  delay: 5000,
-                      // },
-                      pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                          return '<span class="' + className + '"></span>';
-                        },
-                      },
-                    });
-            }, 3000);
-    </script>
     </body>
 </html>

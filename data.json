@@ -57,14 +57,15 @@
             "title": "Branding",
             "components": [
                 {
+
                     "group": "branding",
                     "name": "color-scheme",
                     "title": "Colour Scheme",
                     "type": "colors",
                     "colors": [
-                        "#f8fbff,#f1f9ff,#67a0c3,#0799f5,#2980b9,#0374bb,#025f9a,#02609b,#025589,#34495e",
-                        "#ffffff,#f6f6f6,#eeeeee,#e6e6e8,#e2e6eb,#999999,#9b9b9b,#777777,#555555,#424242,#222222,#111111",
-                        "#7f8c8d,#16a085,#c0392b"
+                        "#f1f9ff,#0799F5,#02609B,#025589,#2980b9",
+                        "#fff,#f8f9fa,#E2E6EB,#ccc,#7f8c8d,#777,#333,#00",
+                        "#C0392B,#16A085,#34495e"
                     ]
                 },
                 {
@@ -140,39 +141,69 @@
                     "name": "bold",
                     "title": "Bold",
                     "width": "half"
+                },
+                {
+                    "group": "typography",
+                    "name": "text",
+                    "title": "Text",
+                    "width": "half"
                 }
             ]
         },
         {
-            "name": "buttons",
-            "title": "Buttons",
+            "name": "layout",
+            "title": "Layout",
             "components": [
                 {
-                    "group": "buttons",
-                    "name": "primary",
-                    "title": "Primary Button",
-                    "width": "half",
-                    "options": {
-                        "sample_dark_background": false
-                    }
+                    "group": "layout",
+                    "name": "header",
+                    "title": "Header"
                 },
                 {
-                    "group": "buttons",
-                    "name": "rounded",
-                    "title": "Rounded Button",
-                    "width": "half",
-                    "options": {
-                        "sample_dark_background": false
-                    }
+                    "group": "layout",
+                    "name": "subheader",
+                    "title": "Subheader"
                 },
                 {
-                    "group": "buttons",
-                    "name": "tab",
-                    "title": "Tab Button",
-                    "width": "half",
-                    "options": {
-                        "sample_dark_background": false
-                    }
+                    "group": "layout",
+                    "name": "footer",
+                    "title": "Footer"
+                },
+                {
+                    "group": "layout",
+                    "name": "search",
+                    "title": "Search"
+                },
+                {
+                    "group": "layout",
+                    "name": "profile",
+                    "title": "Profile"
+                },
+                {
+                    "group": "layout",
+                    "name": "content",
+                    "title": "Content"
+                }
+            ]
+        },
+        {
+            "name": "cards",
+            "title": "Cards",
+            "components": [
+                {
+                    "group": "cards",
+                    "name": "lessons",
+                    "title": "Lessons"
+                },
+                {
+                    "group": "cards",
+                    "name": "plans",
+                    "title": "Plans"
+                },
+                {
+                    "group": "cards",
+                    "name": "admin",
+                    "title": "Admin"
                 }
             ]
         },
@@ -182,8 +213,23 @@
             "components": [
                 {
                     "group": "navigation",
-                    "name": "header",
-                    "title": "Header Navigation"
+                    "name": "mainmenu",
+                    "title": "Main Menu"
+                },
+                {
+                    "group": "navigation",
+                    "name": "megamenu",
+                    "title": "Mega Menu"
+                },
+                {
+                    "group": "navigation",
+                    "name": "mobilemenu",
+                    "title": "Mobile Menu"
+                },
+                {
+                    "group": "navigation",
+                    "name": "sidemenu",
+                    "title": "Side Menu"
                 }
             ]
         }
