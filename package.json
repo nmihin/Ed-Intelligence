@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "cross-env NODE_ENV=dev vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "serve": "cross-env NODE_ENV=dev vue-cli-service serve",
-    "test": "cross-env NODE_ENV=test jest --coverage"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.0.0",
@@ -95,6 +93,15 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   },
   "browserslist": [
     "> 1%",
