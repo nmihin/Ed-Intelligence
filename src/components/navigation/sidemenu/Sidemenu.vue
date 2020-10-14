@@ -15,47 +15,18 @@
                                 <p>My Lesson Plan</p>
                                 <i class="icon icon-arrow-gray right"></i>
                               </a>
-                                <ul class="side-menu__results">
-                                  <li><h2>Math</h2>
-                                    <ul>
-                                      <li><h3>Kindergarten</h3>
-                                        <ul class="esquerda">
-                                          <li><a href="#">Counting & Cardinality</a></li>
-                                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                                          <li><a href="#">Measurement & Data</a></li>
-                                          <li><a href="#">Geometry</a></li>
-                                        </ul>
-                                      </li>
-                                      <li><h3>First Grade</h3>
-                                        <ul class="esquerda">
-                                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                                          <li><a href="#">Measurement & Data</a></li>
-                                          <li><a href="#">Geometry</a></li>
-                                        </ul>
-                                      </li>
-                                      <li><h3>Fourth Grade</h3>
-                                        <ul class="esquerda">
-                                          <li><a href="#">Counting & Cardinality</a></li>
-                                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                                          <li><a href="#">Measurement & Data</a></li>
-                                          <li><a href="#">Geometry</a></li>
-                                        </ul>
-                                      </li>
-                                      <li><h3>Fifth Grade</h3>
-                                        <ul class="esquerda">
-                                          <li><a href="#">Counting & Cardinality</a></li>
-                                          <li><a href="#">Operations & Algebric Thinking</a></li>
-                                          <li><a href="#">Number & Operations in Base Ten</a></li>
-                                          <li><a href="#">Measurement & Data</a></li>
-                                          <li><a href="#">Geometry</a></li>
-                                        </ul>
-                                      </li>
-                                    </ul>
-                                  </li>
-                              </ul>
+                                <ul class="side-menu__results card-boxes lessons">
+                                    <li>
+                                        <div class="swiper-container">
+                                          <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                              <CardLesson />
+                                            </div>
+                                          </div>
+                                          <div class="swiper-scrollbar"></div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                               <a href="#">
@@ -63,28 +34,8 @@
                                 <p>Add / View Lesson Plan</p>
                                 <i class="icon icon-arrow-gray right"></i>
                               </a>
-                              <ul class="side-menu__results">
-                                <li><h2>Math</h2>
-                                  <ul>
-                                    <li><h3>Kindergarten</h3>
-                                      <ul class="esquerda">
-                                        <li><a href="#">Counting & Cardinality</a></li>
-                                        <li><a href="#">Operations & Algebric Thinking</a></li>
-                                        <li><a href="#">Number & Operations in Base Ten</a></li>
-                                        <li><a href="#">Measurement & Data</a></li>
-                                        <li><a href="#">Geometry</a></li>
-                                      </ul>
-                                    </li>
-                                    <li><h3>First Grade</h3>
-                                      <ul class="esquerda">
-                                        <li><a href="#">Operations & Algebric Thinking</a></li>
-                                        <li><a href="#">Number & Operations in Base Ten</a></li>
-                                        <li><a href="#">Measurement & Data</a></li>
-                                        <li><a href="#">Geometry</a></li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                </li>
+                              <ul class="side-menu__results card-boxes lessons">
+                                <li><CardLesson /></li>
                             </ul>
                             </li>
                             <li>
@@ -93,38 +44,9 @@
                                 <p>Follow Lesson Plan</p>
                                 <i class="icon icon-arrow-gray right"></i>
                               </a>
-                              <ul class="side-menu__results">
-                                <li><h2>Math</h2>
-                                  <ul>
-                                    <li><h3>First Grade</h3>
-                                      <ul class="esquerda">
-                                        <li><a href="#">Operations & Algebric Thinking</a></li>
-                                        <li><a href="#">Number & Operations in Base Ten</a></li>
-                                        <li><a href="#">Measurement & Data</a></li>
-                                        <li><a href="#">Geometry</a></li>
-                                      </ul>
-                                    </li>
-                                    <li><h3>Fourth Grade</h3>
-                                      <ul class="esquerda">
-                                        <li><a href="#">Counting & Cardinality</a></li>
-                                        <li><a href="#">Operations & Algebric Thinking</a></li>
-                                        <li><a href="#">Number & Operations in Base Ten</a></li>
-                                        <li><a href="#">Measurement & Data</a></li>
-                                        <li><a href="#">Geometry</a></li>
-                                      </ul>
-                                    </li>
-                                    <li><h3>Fifth Grade</h3>
-                                      <ul class="esquerda">
-                                        <li><a href="#">Counting & Cardinality</a></li>
-                                        <li><a href="#">Operations & Algebric Thinking</a></li>
-                                        <li><a href="#">Number & Operations in Base Ten</a></li>
-                                        <li><a href="#">Measurement & Data</a></li>
-                                        <li><a href="#">Geometry</a></li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                </li>
-                            </ul>
+                              <ul class="side-menu__results card-boxes lessons">
+                                <li><CardLesson /></li>
+                              </ul>
                             </li>
                         </ul>
                     </div>
@@ -139,16 +61,34 @@
 
 <script>
     import $ from "jquery";
+    import CardLesson from '../../../components/cards/lessons/CardLesson.vue'
+    import Swiper from '../../../assets/js/swiper.min.js'
+    import '../../../assets/css/swiper.min.css';
     
     export default {
         name: 'sidemenu',
+        components: {
+          CardLesson
+        },
         mounted: function() {
+              // TOGGLER
               $(".side-menu-content li a").on("click", function(e){
                 e.preventDefault();
                 $(".side-menu-content li").each(function(){
                   $(this).removeClass("active");
                 })
                 $(this).parent().addClass("active");
+              });
+              // SWIPER
+              // eslint-disable-next-line no-unused-vars
+              const swiper = new Swiper('.swiper-container', {
+                  direction: 'vertical',
+                  slidesPerView: 'auto',
+                  freeMode: true,
+                  scrollbar: {
+                    el: '.swiper-scrollbar',
+                  },
+                  mousewheel: true
               });
         } 
     }

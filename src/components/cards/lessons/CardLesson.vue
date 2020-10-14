@@ -1,75 +1,110 @@
- <template>     
-                  <div class="card-box flex-fill">
-                    <div class="card-title d-flex justify-content-between align-items-center">
-                      <h2>Upcoming Lesson Plans</h2>
-                      <a href="#" class="select"><i class="icon icon-dots"></i></a>
-                    </div>
-                    <div class="card-content d-flex">
-                      <ul>
-                        <li class="row d-flex justify-content-around">
-                          <div class="card-element col-3 col-lg-3">
-                            <img class="card-avatar" src="../../../assets/img/users/avatar-1.jpg" alt="user" />
-                          </div>
-                          <div class="card-element col-6 col-lg-5">
-                            <h3>English</h3>
-                            <p>
-                              <a href="#" class="location"><i class="icon icon-location"></i></a>
-                              <small>CC.012 Class</small>
-                            </p>
-                          </div>
-                          <div class="card-element col-3 col-lg-4">
-                            <a href="#" class="edit">
-                              <i class="icon icon-edit"></i>
-                            </a>
-                            <a href="#" class="delete">
-                              <i class="icon icon-delete"></i>
-                            </a>
-                          </div>
-                        </li>
-                        <li class="row d-flex justify-content-around">
-                          <div class="card-element col-3 col-lg-3">
-                            <img class="card-avatar" src="../../../assets/img/users/avatar-2.jpg" alt="user" />
-                          </div>
-                          <div class="card-element col-6 col-lg-5">
-                            <h3>English</h3>
-                            <p>
-                              <a href="#" class="location"><i class="icon icon-location"></i></a>
-                              <small>CC.012 Class</small>
-                            </p>
-                          </div>
-                          <div class="card-element col-3 col-lg-4">
-                            <a href="#" class="edit">
-                              <i class="icon icon-edit"></i>
-                            </a>
-                            <a href="#" class="delete">
-                              <i class="icon icon-delete"></i>
-                            </a>
-                          </div>
-                        </li>
-                        <li class="row d-flex justify-content-around">
-                          <div class="card-element col-3 col-lg-3">
-                            <img class="card-avatar" src="../../../assets/img/users/avatar-3.jpg" alt="user" />
-                          </div>
-                          <div class="card-element col-6 col-lg-5">
-                            <h3>English</h3>
-                            <p>
-                              <a href="#" class="location"><i class="icon icon-location"></i></a>
-                              <small>CC.012 Class</small>
-                            </p>
-                          </div>
-                          <div class="card-element col-3 col-lg-4">
-                            <a href="#" class="edit">
-                              <i class="icon icon-edit"></i>
-                            </a>
-                            <a href="#" class="delete">
-                              <i class="icon icon-delete"></i>
-                            </a>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="card-all">
-                      <a href="#">view all +</a>
-                    </div>
-                  </div>
+ <template>
+   <div class="row">
+     <div class="col-12">
+        <!-- Box -->
+        <div class="card-box">
+          <div class="card-title">
+            <h2>My Test Lesson - English</h2>
+          </div>
+          <div class="card-element">
+            <a href="#" class="edit">
+              <i class="icon icon-edit"></i>
+            </a>
+            <a href="#" class="delete">
+              <i class="icon icon-delete"></i>
+            </a>
+          </div>
+          <ul class="card-breadcrumb">
+            <li>
+              Four
+            </li>
+            <li>
+              English
+            </li>
+            <li>
+              <a title="Language" href="#">Language</a>
+            </li>
+          </ul>
+          <div class="card-content">
+            <p>Conventions of standard English: Demostrate command of the conventions of the standard English grammar and usage when writing or speaking.</p>
+            <button class="button medium ed-btn__primary">CC.4.L.1</button>
+          </div>
+          <div class="card-footer">
+            <i class="icon icon-lesson"></i><span>0 Resources</span>
+          </div>
+        </div>
+        <!-- Box -->
+        <div class="card-box">
+          <div class="card-title">
+            <h2>My Test Lesson - English</h2>
+          </div>
+          <ul class="card-breadcrumb">
+            <li>
+              Four
+            </li>
+            <li>
+              English
+            </li>
+            <li>
+              <a title="Language" href="#">Language</a>
+            </li>
+          </ul>
+          <div class="card-content">
+            <p>Conventions of standard English: Demostrate command of the conventions of the standard English grammar and usage when writing or speaking.</p>
+            <button class="button medium ed-btn__primary">CC.4.L.1</button>
+          </div>
+          <div class="card-footer">
+            <i class="icon icon-lesson"></i><span>0 Resources</span>
+          </div>
+        </div>
+        <!-- Box -->
+        <div class="card-box">
+          <div class="card-title">
+            <h2>My Test Lesson - English</h2>
+          </div>
+          <ul class="card-breadcrumb">
+            <li>
+              Four
+            </li>
+            <li>
+              English
+            </li>
+            <li>
+              <a title="Language" href="#">Language</a>
+            </li>
+          </ul>
+          <div class="card-content">
+            <p>Conventions of standard English: Demostrate command of the conventions of the standard English grammar and usage when writing or speaking.</p>
+            <button class="button medium ed-btn__primary">CC.4.L.1</button>
+          </div>
+          <div class="card-footer">
+            <i class="icon icon-lesson"></i><span>0 Resources</span>
+          </div>
+        </div>
+        <!-- Box -->
+        <div class="card-box">
+          <div class="card-title">
+            <h2>My Test Lesson - English</h2>
+          </div>
+          <ul class="card-breadcrumb">
+            <li>
+              Four
+            </li>
+            <li>
+              English
+            </li>
+            <li>
+              <a title="Language" href="#">Language</a>
+            </li>
+          </ul>
+          <div class="card-content">
+            <p>Conventions of standard English: Demostrate command of the conventions of the standard English grammar and usage when writing or speaking.</p>
+            <button class="button medium ed-btn__primary">CC.4.L.1</button>
+          </div>
+          <div class="card-footer">
+            <i class="icon icon-lesson"></i><span>0 Resources</span>
+          </div>
+        </div>
+     </div>
+   </div>
  </template>

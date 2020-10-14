@@ -10,7 +10,7 @@
             <div class="card-boxes">
               <div class="container-fluid">
                 <div class="row d-flex justify-content-around flex-nowrap">
-                  <CardLesson />
+                  <CardUpcoming />
                   <Chart />
                 </div>
               </div>
@@ -25,14 +25,14 @@
 
 <script>
 import CardAdmin from '../components/cards/admin/CardAdmin.vue'
-import CardLesson from '../components/cards/lessons/CardLesson.vue'
+import CardUpcoming from '../components/cards/upcoming/CardUpcoming.vue'
 import Chart from '../components/features/chart/Chart.vue'
 
 export default {
   name: 'App',
   components: {
     CardAdmin,
-    CardLesson,
+    CardUpcoming,
     Chart
   }
 }

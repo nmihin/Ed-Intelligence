@@ -178,7 +178,7 @@ h3 {
 }
 
 h4 {
-  font-size: 26px
+  font-size: 16px
 }
 
 h5 {
@@ -794,7 +794,7 @@ h6 {
   bottom: 0
 }
 
-.ed_card-boxes.lessons .card-box {
+.ed_card-boxes.upcoming .card-box {
   padding: 0;
   overflow: visible;
   margin-right: 4%
@@ -908,7 +908,7 @@ h6 {
   top: 35px
 }
 
-.ed_card-boxes.lessons .select {
+.ed_card-boxes.upcoming .select {
   font-size: 14px;
   font-weight: 700;
   position: absolute;
@@ -1056,27 +1056,27 @@ h6 {
   left: 0
 }
 
-.ed_card-boxes.lessons .card-content>ul>li {
+.ed_card-boxes.upcoming .card-content>ul>li {
   border-bottom: 0;
   padding: 5px 0 5px 10%;
   font-weight: 700;
   font-size: 14px
 }
 
-.ed_card-boxes.lessons .card-title {
+.ed_card-boxes.upcoming .card-title {
   margin-bottom: 0;
   padding-left: 10%;
   color: var(--primary);
   height: 60px
 }
 
-.ed_card-boxes.lessons .card-title h2 {
+.ed_card-boxes.upcoming .card-title h2 {
   margin-top: 20px;
   font-size: 21px;
   font-weight: 700
 }
 
-.ed_card-boxes.lessons .card-content {
+.ed_card-boxes.upcoming .card-content {
   padding-left: 0;
   padding-bottom: 21px;
   float: left;
@@ -1084,7 +1084,7 @@ h6 {
   background-color: var(--white)
 }
 
-.ed_card-boxes.lessons .card-box .icon {
+.ed_card-boxes.upcoming .card-box .icon {
   top: -10px;
   margin: 8px auto;
   height: 44px;
@@ -1097,7 +1097,7 @@ h6 {
   padding: 11px
 }
 
-.ed_card-boxes.lessons .card-content>span {
+.ed_card-boxes.upcoming .card-content>span {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -1107,7 +1107,7 @@ h6 {
   left: -14px
 }
 
-.ed_card-boxes.lessons .card-content>ul>li>h3 {
+.ed_card-boxes.upcoming .card-content>ul>li>h3 {
   font-size: 18px;
   margin: 0;
   padding: 10px 50px 10px 0;
@@ -1115,7 +1115,7 @@ h6 {
   position: relative
 }
 
-.ed_card-boxes.lessons .card-content>ul>li>h3:after {
+.ed_card-boxes.upcoming .card-content>ul>li>h3:after {
   background: var(--lightgray);
   height: 1px;
   width: 30px;
@@ -1125,27 +1125,27 @@ h6 {
   right: 10px
 }
 
-.ed_card-boxes.lessons .card-content>span.green {
+.ed_card-boxes.upcoming .card-content>span.green {
   background: var(--green)
 }
 
-.ed_card-boxes.lessons .card-content>span.gray {
+.ed_card-boxes.upcoming .card-content>span.gray {
   background: var(--bluewood)
 }
 
-.ed_card-boxes.lessons .card-content>span.blue {
+.ed_card-boxes.upcoming .card-content>span.blue {
   background: var(--tertiary)
 }
 
-.ed_card-boxes.lessons .card-content>span.light {
+.ed_card-boxes.upcoming .card-content>span.light {
   background: var(--oslogray)
 }
 
-.ed_card-boxes.lessons .card-content>span.red {
+.ed_card-boxes.upcoming .card-content>span.red {
   background: var(--red)
 }
 
-.ed_card-boxes.lessons .card-content>a {
+.ed_card-boxes.upcoming .card-content>a {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -1154,11 +1154,11 @@ h6 {
   font-weight: 700
 }
 
-.ed_card-boxes.lessons .card-content>a:hover {
+.ed_card-boxes.upcoming .card-content>a:hover {
   color: var(--tertiary)
 }
 
-.ed_card-boxes.lessons .card-weeks {
+.ed_card-boxes.upcoming .card-weeks {
   position: absolute;
   right: -20px;
   width: 60px;
@@ -1170,11 +1170,11 @@ h6 {
   width: 50px
 }
 
-.ed_card-boxes.lessons .card-weeks ul {
+.ed_card-boxes.upcoming .card-weeks ul {
   height: 100%
 }
 
-.ed_card-boxes.lessons .card-weeks ul li {
+.ed_card-boxes.upcoming .card-weeks ul li {
   height: 20%;
   width: 100%;
   font-size: 14px;
@@ -1187,11 +1187,11 @@ h6 {
   border-bottom: 1px solid var(--lightgray)
 }
 
-.ed_card-boxes.lessons .card-weeks ul li:last-child {
+.ed_card-boxes.upcoming .card-weeks ul li:last-child {
   border-bottom: 0
 }
 
-.ed_card-boxes.lessons .card-footer {
+.ed_card-boxes.upcoming .card-footer {
   background-color: var(--primary);
   padding-right: 10%;
   padding-left: 10%;
@@ -1203,11 +1203,11 @@ h6 {
   padding-top: 0
 }
 
-.ed_card-boxes.lessons .card-footer>div>div {
+.ed_card-boxes.upcoming .card-footer>div>div {
   position: relative
 }
 
-.ed_card-boxes.lessons .card-footer span {
+.ed_card-boxes.upcoming .card-footer span {
   bottom: -10px;
   position: absolute;
   color: var(--white);
@@ -1818,7 +1818,7 @@ li:hover .megamenu {
   margin-bottom: 0;
 }
 
-.side-menu-content>ul>li .icon:before {
+.side-menu-content > ul > li > a > .icon:before {
   color: var(--dark)
 }
 
@@ -1828,8 +1828,8 @@ li:hover .megamenu {
   cursor: pointer
 }
 
-.side-menu-content>ul>li.active .icon:before,
-.side-menu-content>ul>li:hover .icon:before {
+.side-menu-content>ul>li.active > a > .icon:before,
+.side-menu-content>ul>li:hover > a > .icon:before {
   color: var(--primary)
 }
 
@@ -1879,13 +1879,12 @@ ul.side-menu__results {
   width: 200%;
   font-size: 12px;
   z-index: 500;
-  background-color: var(--white);
   text-align: center;
   margin: auto;
   border-radius: 0 10px 10px 0;
   padding: 0;
   float: left;
-  padding: 25px 25px 25px 50px;
+  padding: 10px;
   position: absolute;
   left: 100%;
   top: 0;
@@ -1966,6 +1965,213 @@ ul.side-menu__results>li>ul>li a:hover {
 .search-box input::placeholder {
   color: var(--white);
   font-size: 15px
+}
+
+
+/* GZA buttons */
+[class*="ed-btn"] {
+  z-index: 1;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 10px 25px;
+  margin: 5px 0 !important;
+  border: 1px solid transparent !important;
+  font-family: 'SF Pro Text', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+[class*="ed-btn"]:hover {
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+.ed-btn__primary {
+  color: var(--white) !important;
+  background: var(--primary) !important;
+  border-radius: 40px !important;
+}
+.ed-btn__primary:hover {
+  color: var(--white) !important;
+  background: var(--secondary) !important;
+}
+.ed-btn__secondary {
+  color: var(--white) !important;
+  background: var(--secondary) !important;
+  border-radius: 7px !important;
+}
+.ed-btn__secondary:hover {
+  color: var(--dark) !important;
+  background: var(--tertiary) !important;
+}
+.ed-btn__tertiary {
+  color: var(--dark) !important;
+  background: var(--tertiary) !important;
+  border-radius: 2px !important;
+  border: 1px solid transparent;
+}
+.ed-btn__tertiary:hover {
+  color: var(--dark) !important;
+  background: var(--background) !important;
+  border: 1px solid var(--tertiary) !important;
+}
+.ed-btn-ghost__primary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border-color: var(--primary) !important;
+  border-radius: 40px !important;
+}
+.ed-btn-ghost__primary:hover {
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+.ed-btn-ghost__secondary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border-color: var(--primary) !important;
+  border-radius: 7px !important;
+}
+.ed-btn-ghost__secondary:hover {
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+.ed-btn-ghost__tertiary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border-color: var(--primary) !important;
+  border-radius: 2px !important;
+}
+.ed-btn-ghost__tertiary:hover {
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+.ed-btn-transparent {
+  background-color: transparent !important;
+  cursor: pointer;
+  position: relative;
+  border: 0 !important;
+  min-width: auto;
+  padding: initial;
+}
+.ed-btn-transparent:hover, .ed-btn-transparent:active {
+  background-color: transparent !important;
+  border: none;
+}
+button.small {
+  font-size: 12px !important;
+}
+button.medium {
+  font-size: 14px;
+}
+button.large {
+  font-size: 16px !important;
+}
+button[disabled="true"] {
+  -webkit-filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+.card-boxes.lessons {
+  padding-top: 0;
+}
+.card-boxes.lessons > li {
+  padding-top: 0;
+}
+.card-boxes.lessons .card-box {
+  padding:0;
+  margin-top:0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 30px;
+}
+.card-boxes.lessons .card-box .card-element {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.card-boxes.lessons .card-box .card-title {
+  padding:15px 30px;
+  margin-bottom: 0;
+  height: auto;
+  min-height: 55px;
+}
+
+.card-boxes.lessons .card-box .card-title h2 {
+  float: left;
+}
+
+.card-boxes.lessons .card-box .card-breadcrumb {
+  padding:0 30px 0 30px;
+}
+
+.card-boxes.lessons .card-box .card-content {
+  padding:15px 30px;
+  float: left;
+  margin-top: 0;
+}
+
+.card-boxes.lessons .card-box .card-content p {
+  color: var(--dark);
+}
+
+.card-boxes.lessons .card-box .card-footer {
+  padding:15px 30px;
+  float: left;
+  width: 100%;
+}
+
+.card-boxes.lessons .card-box .card-footer .icon {
+  background-color: var(--primary);
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-boxes.lessons .card-box .card-footer .icon:before {
+  color: var(--white);
+}
+
+.card-boxes.lessons .card-breadcrumb {
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.card-boxes.lessons .card-breadcrumb > li {
+    float: left;
+    width: auto;
+    margin-right: 10px;
+    position: relative;
+}
+
+.card-boxes.lessons .card-breadcrumb > li:after {
+    content: "/";
+    position: absolute;
+    right: -7px;
+}
+
+.card-boxes.lessons .card-breadcrumb > li:last-child:after {
+  content: "";
 }
 
 .footer {
@@ -2251,7 +2457,7 @@ ul.side-menu__results>li>ul>li a:hover {
 }
 
 @media only screen and (max-width:620px) {
-  .ed_card-boxes.lessons>div {
+  .ed_card-boxes.upcoming>div {
     width: 100%
   }
   .card-boxes .d-flex .card-box,
