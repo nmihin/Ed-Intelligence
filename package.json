@@ -27,9 +27,7 @@
     "vuejs-datetimepicker": "^1.1.13"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "chalk": "^2.0.1",
-    "copy-webpack-plugin": "^4.0.1"
+
   },
   "babel": {
     "presets": [
