@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:dev": "vue-cli-service build --mode development",
+    "analyz": "vue-cli-service build --mode analyz",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@umijs/yorkie": "^2.0.5",
