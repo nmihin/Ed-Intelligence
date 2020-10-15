@@ -35,7 +35,7 @@
                                 <i class="icon icon-arrow-gray right"></i>
                               </a>
                               <ul class="side-menu__results card-boxes lessons">
-                                <li><CardLesson /></li>
+                            
                             </ul>
                             </li>
                             <li>
@@ -45,7 +45,7 @@
                                 <i class="icon icon-arrow-gray right"></i>
                               </a>
                               <ul class="side-menu__results card-boxes lessons">
-                                <li><CardLesson /></li>
+                             
                               </ul>
                             </li>
                         </ul>
@@ -62,8 +62,6 @@
 <script>
     import $ from "jquery";
     import CardLesson from '../../../components/cards/lessons/CardLesson.vue'
-    import Swiper from '../../../assets/js/swiper.min.js'
-    import '../../../assets/css/swiper.min.css';
     
     export default {
         name: 'sidemenu',
@@ -78,17 +76,6 @@
                   $(this).removeClass("active");
                 })
                 $(this).parent().addClass("active");
-              });
-              // SWIPER
-              // eslint-disable-next-line no-unused-vars
-              const swiper = new Swiper('.swiper-container', {
-                  direction: 'vertical',
-                  slidesPerView: 'auto',
-                  freeMode: true,
-                  scrollbar: {
-                    el: '.swiper-scrollbar',
-                  },
-                  mousewheel: true
               });
         } 
     }
