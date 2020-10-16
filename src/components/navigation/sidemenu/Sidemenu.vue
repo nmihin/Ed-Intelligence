@@ -15,9 +15,9 @@
              <p>My Lesson Plan</p>
              <i class="icon icon-arrow-gray right"></i>
            </a>
-           <ul class="side-menu__results card-boxes lessons scheduler">
+           <ul class="side-menu__results card-boxes lessons">
              <li>
-              <Scheduler />
+               <CardLesson />
              </li>
            </ul>
          </li>
@@ -39,9 +39,9 @@
              <p>Follow Lesson Plan</p>
              <i class="icon icon-arrow-gray right"></i>
            </a>
-           <ul class="side-menu__results card-boxes lessons">
+           <ul class="side-menu__results card-boxes lessons scheduler">
              <li>
-               <CardLesson />
+               <Scheduler />
              </li>
            </ul>
          </li>
