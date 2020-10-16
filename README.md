@@ -1,27 +1,40 @@
-# EdIntelligenceApp
+# vue-calendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+Link to application: https://my-vue-calendar.netlify.com
 
-## Development server
+## Built With
+- Vue
+- Vuetify
+- Firebase
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Project setup
+```
+npm install
+```
 
-## Code scaffolding
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## Build
+### Lints and fixes files
+```
+npm run lint
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Environment Variables
+```
+VUE_APP_FIREBASE_API_KEY=FIREBASE_API_KEY
+VUE_APP_FIREBASE_AUTH_DOMAIN=FIREBASE_AUTH_DOMAIN
+VUE_APP_FIREBASE_DATABASE_URL=FIREBASE_DATABASE_URL
+VUE_APP_FIREBASE_PROJECT_ID=FIREBASE_PROJECT_ID
+VUE_APP_FIREBASE_STORAGE_BUCKET=FIREBASE_STORAGE_BUCKET
+VUE_APP_FIREBASE_MESSAGING_SENDER_ID=FIREBASE_MESSAGING_SENDER_ID
+VUE_APP_FIREBASE_APP_ID=FIREBASE_APP_ID
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

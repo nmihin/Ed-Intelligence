@@ -1,18 +1,23 @@
 <template>
-  <div id="app" class="theme-layout">
-      dndfmdfmdfn
-  </div>
+  <v-app>
+    <v-content>
+      <Calendar />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-
+import Calendar  from './components/Calendar';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      showWhich: "Home"
-    }
-  }
-}
+
+  components: {
+    Calendar
+  },
+
+  data: () => ({
+    //
+  })
+};
 </script>
