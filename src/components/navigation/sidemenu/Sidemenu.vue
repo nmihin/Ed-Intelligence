@@ -48,9 +48,7 @@
        </ul>
      </div>
      <div class="col-12 col-md-4 side-menu-footer">
-       <a href="#" class="left"><i class="icon icon-profile"></i></a>
        <a href="#" class="left"><i class="icon icon-m-settings"></i></a>
-       <a href="#" class="right"><i class="icon icon-logout"></i></a>
      </div>
    </div>
    <!-- Side Menu-END -->

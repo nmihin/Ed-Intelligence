@@ -2612,7 +2612,7 @@ button.jqx-button.primary {
   }
   .card-boxes.lessons {
     position: absolute !important;
-    top: 30vh;
+    top: 285px;
     overflow: hidden;
     height: auto;
     padding: 0 10px;
