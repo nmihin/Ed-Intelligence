@@ -1880,6 +1880,354 @@ ul.side-menu__results > li > ul > li a:hover {
   font-size: 15px;
 }
 
+/* ED buttons */
+[class*="ed-btn"] {
+  z-index: 1;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  outline: none;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 10px 25px;
+  margin: 5px 0 !important;
+  border: 1px solid transparent !important;
+  font-family: 'SF Pro Text', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+[class*="ed-btn"]:focus {
+  outline: none;
+}
+[class*="ed-btn"]:hover {
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+.ed-btn__primary {
+  color: var(--white) !important;
+  background: var(--primary) !important;
+  border-radius: 40px !important;
+}
+.ed-btn__primary:hover {
+  color: var(--white) !important;
+  background: var(--tertiary) !important;
+}
+.ed-btn__secondary {
+  color: var(--white) !important;
+  background: var(--secondary) !important;
+  border-radius: 7px !important;
+}
+.ed-btn__secondary:hover {
+  color: var(--dark) !important;
+  background: var(--tertiary) !important;
+}
+.ed-btn__tertiary {
+  color: var(--dark) !important;
+  background: var(--tertiary) !important;
+  border-radius: 2px !important;
+  border: 1px solid transparent;
+}
+.ed-btn__tertiary:hover {
+  color: var(--dark) !important;
+  background: var(--background) !important;
+  border: 1px solid var(--tertiary) !important;
+}
+.ed-btn-ghost__primary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border-color: var(--primary) !important;
+  border-radius: 40px !important;
+}
+.ed-btn-ghost__primary:hover {
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+.ed-btn-ghost__secondary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border-color: var(--primary) !important;
+  border-radius: 7px !important;
+}
+.ed-btn-ghost__secondary:hover {
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+.ed-btn-ghost__tertiary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border-color: var(--primary) !important;
+  border-radius: 2px !important;
+}
+.ed-btn-ghost__tertiary:hover {
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+.ed-btn-transparent {
+  background-color: transparent !important;
+  cursor: pointer;
+  position: relative;
+  border: 0 !important;
+  min-width: auto;
+  padding: initial;
+}
+.ed-btn-transparent:hover, .ed-btn-transparent:active {
+  background-color: transparent !important;
+  border: none;
+}
+button.small {
+  font-size: 12px !important;
+}
+button.medium {
+  font-size: 14px;
+}
+button.large {
+  font-size: 16px !important;
+}
+button[disabled="true"] {
+  -webkit-filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+/* Card boxes lessons */
+.card-boxes.lessons {
+  padding-top: 0;
+  height: calc(100vh - 200px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: block;
+  display: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-boxes.lessons.scheduler {
+  overflow-y: hidden;
+}
+
+.card-boxes.lessons > li {
+  padding-top: 0;
+  display: block;
+}
+.card-boxes.lessons .card-box {
+  width:100%;
+  padding:0;
+  margin-top:0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 30px;
+}
+.card-boxes.lessons .card-box .card-element {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.card-boxes.lessons .card-box .card-title {
+  padding:15px 30px;
+  margin-bottom: 0;
+  height: auto;
+  min-height: 55px;
+}
+
+.card-boxes.lessons .card-box .card-title h2 {
+  float: left;
+}
+
+.card-boxes.lessons .card-box .card-breadcrumb {
+  padding:0 30px 0 30px;
+}
+
+.card-boxes.lessons .card-box .card-content {
+  padding:15px 30px;
+  float: left;
+  margin-top: 0;
+}
+
+.card-boxes.lessons .card-box .card-content p {
+  color: var(--dark);
+}
+
+.card-boxes.lessons .card-box .card-footer {
+  padding:15px 30px;
+  float: left;
+  width: 100%;
+}
+
+.card-boxes.lessons .card-box .card-footer .icon {
+  background-color: var(--primary);
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-boxes.lessons .card-box .card-footer .icon:before {
+  color: var(--white);
+}
+
+.card-boxes.lessons .card-breadcrumb {
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.card-boxes.lessons .card-breadcrumb > li {
+    float: left;
+    width: auto;
+    margin-right: 10px;
+    position: relative;
+}
+
+.card-boxes.lessons .card-breadcrumb > li:after {
+    content: "/";
+    position: absolute;
+    right: -7px;
+}
+
+.card-boxes.lessons .card-breadcrumb > li:last-child:after {
+  content: "";
+}
+
+.card-boxes.lessons_teacher {
+  padding-top: 0;
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-boxes.lessons_teacher {
+  overflow-y: hidden;
+}
+
+.card-boxes.lessons_teacher > li {
+  padding-top: 0;
+  display: block;
+}
+.card-boxes.lessons_teacher .card-box {
+  margin-left: 0;
+  width:100%;
+  padding:0;
+  margin-top:0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 30px;
+}
+.card-boxes.lessons_teacher .card-box .card-element {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.card-boxes.lessons_teacher .card-box .card-title {
+  padding:15px 30px;
+  margin-bottom: 0;
+  height: auto;
+  min-height: 55px;
+}
+
+.card-boxes.lessons_teacher .card-box .card-title h2 {
+  float: left;
+}
+
+.card-boxes.lessons_teacher .card-box .card-breadcrumb {
+  padding:0 30px 0 30px;
+}
+
+.card-boxes.lessons_teacher .card-box .card-content {
+  padding:15px 30px;
+  float: left;
+  margin-top: 0;
+}
+
+.card-boxes.lessons_teacher .card-box .card-content p {
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.card-boxes.lessons_teacher .card-box .card-footer {
+  padding:15px 30px;
+  float: left;
+  width: 100%;
+}
+
+.card-boxes.lessons_teacher .card-box .card-footer .icon {
+  background-color: var(--primary);
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-boxes.lessons_teacher .card-box .card-footer .icon:before {
+  color: var(--white);
+}
+
+.card-boxes.lessons_teacher .card-breadcrumb {
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.card-boxes.lessons_teacher .card-breadcrumb > li {
+    float: left;
+    width: auto;
+    margin-right: 10px;
+    position: relative;
+}
+
+.card-boxes.lessons_teacher .card-breadcrumb > li:after {
+    content: "/";
+    position: absolute;
+    right: -7px;
+}
+
+.card-boxes.lessons_teacher .card-breadcrumb > li:last-child:after {
+  content: "";
+}
+
+.filter-card {
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: var(--white);
+  display: inline-block;
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.filter-card .icon {
+  padding: 10px;
+}
+
+.filter-card .md-menu {
+  margin-left: 20%;
+}
+
+.filter-card .md-menu > a {
+  color: var(--primary) !important;
+}
+
 /*
 13. Footer
 */
