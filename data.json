@@ -117,6 +117,18 @@
             ]
         },
         {
+            "name": "typogrbuttonsaphy",
+            "title": "Buttons",
+            "components": [
+                {
+                    "group": "buttons",
+                    "name": "regular",
+                    "title": "Regular",
+                    "width": "half"
+                }
+            ]
+        },
+        {
             "name": "typography",
             "title": "Typography",
             "components": [
