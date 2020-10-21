@@ -107,7 +107,13 @@
                     "options": {
                         "sample_dark_background": true
                     }
-                }
+                },
+                {
+                    "group": "branding",
+                    "name": "buttons",
+                    "title": "Buttons",
+                    "width": "half"
+                }              
             ]
         },
         {
