@@ -122,8 +122,8 @@
             "components": [
                 {
                     "group": "buttons",
-                    "name": "regular",
-                    "title": "Regular",
+                    "name": "button",
+                    "title": "Regular Button",
                     "width": "half"
                 }
             ]
