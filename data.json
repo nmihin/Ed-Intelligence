@@ -122,7 +122,7 @@
             "components": [
                 {
                     "group": "buttons",
-                    "name": "button",
+                    "name": "regular",
                     "title": "Regular Button",
                     "width": "half"
                 }
